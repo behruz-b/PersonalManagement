@@ -6,8 +6,13 @@ import play.api.mvc._
 object Application extends Controller {
 
   def index = Action {
-    Ok(views.html.index("Your new application is ready."))
-//    hghghgh ghghgkjbxkcbxkcxbckxhbxhcbxhc
+    Ok(views.html.index())
+  }
+  def navbar = Action {
+    Ok(views.html.navbar("Eldor"))
+  }
+  def hodim = Action {
+    Ok(views.html.Hodimlar())
   }
 
 }
