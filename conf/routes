@@ -6,6 +6,8 @@
 GET        /                         controllers.Application.index
 GET        /OqituvchiAnketasi        controllers.Application.OqituvchiAnketasi
 GET        /hodimlar                 controllers.Application.hodimlar
+GET        /talabalar                 controllers.Application.talabalar
+
 
 # Map static resources from the /public folder to the /assets URL path
 GET        /assets/*file             controllers.Assets.at(path="/public", file)
