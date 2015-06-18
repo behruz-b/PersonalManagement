@@ -3,7 +3,7 @@ package models
 /**
  * Created by Sawyer on 17.06.2015.
  */
-
+import play.api.db.slick.Config.driver.simple._
 
 case class Teacher(id: Option[Int],
                         name:String,
@@ -17,3 +17,4 @@ case class Teacher(id: Option[Int],
                         role:String,
                         department:String,
                          livingPlace:String)
+
