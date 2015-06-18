@@ -1,19 +1,19 @@
 package models
 
-/**
- * Created by Sawyer on 17.06.2015.
- */
+case class shahsiyMal(id: Option[Int],
+                      name:String,
+                      surname:String,
+                      secondname: String,
 
+                      day:String,
+                      month:String,
+                      year:String,
 
-case class Teacher(id: Option[Int],
-                        name:String,
-                        surname:String,
+                      passportSeries:String,
+                      role:String,
+                      department:String,
+                      livingPlace:String)
 
-                        day:String,
-                        month:String,
-                        year:String,
+case class oilaviyMal()
 
-                        passportSeries:String,
-                        role:String,
-                        department:String,
-                         livingPlace:String)
+case class Malumoti()
