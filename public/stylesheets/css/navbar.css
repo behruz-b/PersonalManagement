@@ -1,0 +1,10 @@
+.nav-sidebar {
+    margin-right: -15px;
+    margin-left: -15px;
+    margin-bottom: 30px;
+}
+
+.nav-sidebar > .active > a {
+    color: #fff;
+    background-color: #428bca;
+}

@@ -15,4 +15,7 @@ object Application extends Controller {
   def hodimlar = Action{
     Ok(views.html.hodimlar())
   }
+  def talabalar = Action{
+    Ok(views.html.talabalar())
+  }
 }
