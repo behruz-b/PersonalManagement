@@ -5,7 +5,7 @@
 # Home page
 GET        /                         controllers.Application.index
 GET        /OqituvchilarAnketasi     controllers.Application.OqituvchilarAnketasi
-GET        /OqituvchilarRoyhati      controllers.Application.OqituvchiRoyhati
+GET        /OqituvchilarRoyhati      controllers.Application.OqituvchilarRoyhati
 GET        /Xodimlar                 controllers.Application.Xodimlar
 GET        /XodimlarRoyhati          controllers.Application.XodimlarRoyhati
 
