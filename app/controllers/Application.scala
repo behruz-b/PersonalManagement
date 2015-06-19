@@ -9,8 +9,8 @@ object Application extends Controller {
     Ok(views.html.index("Your new application is ready."))
 //    hghghgh ghghgkjbxkcbxkcxbckxhbxhcbxhc
   }
-  def OqituvchiAnketasi = Action{
-    Ok(views.html.OqituvchiAnketasi())
+  def OqituvchilarAnketasi = Action{
+    Ok(views.html.oqituvchiAnketasi())
   }
   def OqituvchiRoyhati = Action{
     Ok(views.html.OqituvchilarRoyhati())
@@ -18,5 +18,7 @@ object Application extends Controller {
   def Xodimlar = Action{
     Ok(views.html.Xodimlar())
   }
-
+  def XodimlarRoyhati = Action{
+    Ok(views.html.xodimlarRoyhati())
+  }
 }
