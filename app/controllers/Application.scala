@@ -18,6 +18,9 @@ object Application extends Controller {
   def Xodimlar = Action{
     Ok(views.html.Xodimlar())
   }
+  def manzil = Action{
+    Ok(views.html.manzil())
+  }
   def XodimlarRoyhati = Action{
     Ok(views.html.XodimlarRoyhati())
   }
