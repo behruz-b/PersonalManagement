@@ -5,8 +5,8 @@
 # Home page
 GET        /                         controllers.Application.index
 GET        /OqituvchiAnketasi        controllers.Application.OqituvchiAnketasi
-GET        /hodimlar                 controllers.Application.hodimlar
-GET        /talabalar                 controllers.Application.talabalar
+GET        /OqituvchilarRoyhati      controllers.Application.OqituvchiRoyhati
+GET        /Xodimlar                 controllers.Application.Xodimlar
 
 
 # Map static resources from the /public folder to the /assets URL path

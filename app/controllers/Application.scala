@@ -12,10 +12,11 @@ object Application extends Controller {
   def OqituvchiAnketasi = Action{
     Ok(views.html.OqituvchiAnketasi())
   }
-  def hodimlar = Action{
-    Ok(views.html.hodimlar())
+  def OqituvchiRoyhati = Action{
+    Ok(views.html.OqituvchilarRoyhati())
   }
-  def talabalar = Action{
-    Ok(views.html.talabalar())
+  def Xodimlar = Action{
+    Ok(views.html.Xodimlar())
   }
+
 }
