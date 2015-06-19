@@ -8,6 +8,7 @@ GET        /OqituvchilarAnketasi     controllers.Application.OqituvchilarAnketas
 GET        /OqituvchilarRoyhati      controllers.Application.OqituvchilarRoyhati
 GET        /Xodimlar                 controllers.Application.Xodimlar
 GET        /XodimlarRoyhati          controllers.Application.XodimlarRoyhati
+GET        /manzil                   controllers.Application.manzil
 
 
 # Map static resources from the /public folder to the /assets URL path
