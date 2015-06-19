@@ -1,10 +1,8 @@
 package models
 
-/**
- * Created by Doston on 18.06.2015.
- */
 
-case class Hodim(id: Option[Int],
+
+case class xodim(id: Option[Int],
                 First_name: String,
                 Last_name: String,
                 Second_name: String,

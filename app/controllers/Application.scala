@@ -9,13 +9,16 @@ object Application extends Controller {
     Ok(views.html.index("Your new application is ready."))
 //    hghghgh ghghgkjbxkcbxkcxbckxhbxhcbxhc
   }
-  def OqituvchiAnketasi = Action{
-    Ok(views.html.OqituvchiAnketasi())
+  def OqituvchilarAnketasi = Action{
+    Ok(views.html.oqituvchiAnketasi())
   }
-  def hodimlar = Action{
-    Ok(views.html.hodimlar())
+  def OqituvchiRoyhati = Action{
+    Ok(views.html.OqituvchilarRoyhati())
   }
-  def talabalar = Action{
-    Ok(views.html.talabalar())
+  def Xodimlar = Action{
+    Ok(views.html.Xodimlar())
+  }
+  def XodimlarRoyhati = Action{
+    Ok(views.html.xodimlarRoyhati())
   }
 }
