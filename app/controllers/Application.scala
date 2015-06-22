@@ -17,4 +17,7 @@ object Application extends Controller {
   def manzil = Action{
     Ok(views.html.manzil())
   }
+  def boshSahifa = Action{
+    Ok(views.html.boshSahifa())
+  }
 }
