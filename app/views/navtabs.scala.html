@@ -1,0 +1,17 @@
+@(act:String)
+
+<ul class="nav nav-tabs">
+  <li role="presentation" class="@if(act=="asosiy"){active}"><a href="@routes.Application.Xodimlar()">Asosiy</a></li>
+  <li role="presentation" class="@if(act=="manzil"){active}"><a href="@routes.Application.manzil()">Manzil</a></li>
+  <li role="presentation" class="@if(act=="pasport"){active}"><a href="#">Pasport</a></li>
+  <li role="presentation" class="@if(act=="mehnatd"){active}"><a href="#">Mehnat daftarchasi</a></li>
+  <li role="presentation" class="@if(act=="oila"){active}"><a href="#">Oila</a></li>
+  <li role="presentation" class="@if(act=="ish"){active}"><a href="#">Ish</a></li>
+  <li role="presentation" class="@if(act=="tillar"){active}"><a href="#">Tillar</a></li>
+  <li role="presentation" class="@if(act=="mukofot"){active}"><a href="#">Mukofotlari</a></li>
+  <li role="presentation" class="@if(act=="qayergas"){active}"><a href="#">Qayerga saylangan</a></li>
+  <li role="presentation" class="@if(act=="harbiyx"){active}"><a href="#">Harbiy xizmat</a></li>
+  <li role="presentation" class="@if(act=="nashr"){active}"><a href="#">Nashr</a></li>
+  <li role="presentation" class="@if(act=="diplom"){active}"><a href="#">Diplom</a></li>
+  <li role="presentation" class="@if(act=="malakao"){active}"><a href="#">Malaka oshirish</a></li>
+</ul>
