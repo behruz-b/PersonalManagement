@@ -1589,6 +1589,9 @@ pre code {
     margin-left: auto;
     margin-top : 80px;
 }
+.color-black{
+    color: #0f0f0f;
+}
 
 @media (min-width: 768px) {
     .container {

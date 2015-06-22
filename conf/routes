@@ -3,15 +3,17 @@
 # ~~~~
 
 # Home page
-GET         /                         controllers.Application.index
-GET         /OqituvchilarAnketasi     controllers.Application.OqituvchilarAnketasi
-GET         /OqituvchilarRoyhati      controllers.Application.OqituvchilarRoyhati
-GET         /talabalar                controllers.Application.talabalar
+GET        /                         controllers.Application.index
+GET        /OqituvchilarAnketasi     controllers.Application.OqituvchilarAnketasi
+GET        /OqituvchilarRoyhati      controllers.Application.OqituvchilarRoyhati
+GET         /talabalar                   @controllers.Malumot.list
+POST        /talabalar_registr           @controllers.Malumot.registr
+GET         /talabalar_registr           @controllers.Malumot.showAddForm
+GET         /city/:id/remove             @controllers.Malumot.remove(id: Int)
 GET         /hodim/qushish            @controllers.Hodimlar.showAddForm
 POST        /hodim/qushish            @controllers.Hodimlar.add
 GET         /hamma_hodimar            @controllers.Hodimlar.hamma_hodimlar
 GET         /manzil                   controllers.Application.manzil
-
 
 # Map static resources from the /public folder to the /assets URL path
 GET        /assets/*file             controllers.Assets.at(path="/public", file)

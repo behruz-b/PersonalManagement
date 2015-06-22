@@ -16,3 +16,4 @@ libraryDependencies ++= Seq(
   "com.github.tototoshi" %% "slick-joda-mapper" % "1.2.0",
   "com.typesafe.play" %% "play-slick" % "0.8.0"
 )
+
