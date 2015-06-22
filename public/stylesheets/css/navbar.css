@@ -2,9 +2,53 @@
     margin-right: -15px;
     margin-left: -15px;
     margin-bottom: 30px;
+    border-radius: 0px;
 }
-
 .nav-sidebar > .active > a {
     color: #fff;
     background-color: #428bca;
+}
+.footer {
+    margin-top: 400px;
+    margin-bottom: -30px;
+    background: #2e2e2e;
+    height: 250px;
+}
+.footer > a {
+    display: block;
+    padding-right: 30px;
+    text-align: left;
+    color: #807e81;
+    font-family: cursive;
+    font-size: small;
+    padding-left: 32px;
+}
+.footer > a:hover {
+    color: #d9d9de;
+}
+.navbar {
+    background-color: #48484b;
+    border-radius: 7px;
+}
+.navbar-navi.navbar-collapse > ul >li > a > b {
+    color: #8b8694;
+}
+.navbar-nav > li > a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: #807e81;
+    font-size: small;
+}
+.navbar > .container-fluid .navbar-brand {
+    margin-left: -15px;
+    color: #807e81;
+    font-size: large;
+}
+.navbar-nav > li > a:hover {
+    color: #d9d9de;
+    background-color: transparent
+}
+.navbar-navi .navbar-brand:hover, .navbar-navi .navbar-brand:focus {
+    color: #d9d9de;
+
 }
