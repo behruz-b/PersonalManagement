@@ -4,7 +4,7 @@ package models
 //
 ////import play.api.db.slick.Config.driver.simple._
 
-case class shahsiyMal(id: Option[Int],
+case class shahsiyMalumoti(id: Option[Int],
                       name:String,
                       surname:String,
                       secondname: String,

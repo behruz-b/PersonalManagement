@@ -1,6 +1,5 @@
 package controllers
 
-import play.api._
 import play.api.mvc._
 
 object Application extends Controller {
@@ -9,14 +8,16 @@ object Application extends Controller {
     Ok(views.html.index("Your new application is ready."))
 //    hghghgh ghghgkjbxkcbxkcxbckxhbxhcbxhc
   }
-  def OqituvchiAnketasi = Action{
+  def OqituvchilarAnketasi = Action{
     Ok(views.html.OqituvchiAnketasi())
   }
-  def OqituvchiRoyhati = Action{
+  def talabalar = Action{
+    Ok(views.html.talabalar())
+  }
+  def OqituvchilarRoyhati = Action{
     Ok(views.html.OqituvchilarRoyhati())
   }
-  def Xodimlar = Action{
-    Ok(views.html.Xodimlar())
+  def manzil = Action{
+    Ok(views.html.manzil())
   }
-
 }

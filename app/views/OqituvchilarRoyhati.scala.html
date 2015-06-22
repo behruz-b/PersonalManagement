@@ -1,5 +1,36 @@
-
-@main("OqituvchilarRoyhati"){
+@main("OqituvchilarRoyhati") {
     @navbar("OqituvchilarRoyhati")
-    <h1>O'qituvchilar Ro'yhati</h1>
-  }
+    <div class="container">
+        <h1 class="text-center">O'qituvchilar Ro'yhati</h1>
+        <table class="table table-responsive">
+            <div class="row">
+                <div class="col-xs-3">
+                    <thead>
+                        <tr><th>Ismi</th></tr>
+                        <tr><th>Familiyasi</th></tr>
+                        <tr><th>Otasining ismi</th></tr>
+                        <tr><th>Tug'ilgan yilith</th></tr>
+                        <tr><th>Bo'lim (kafedra)</th></tr>
+                        <tr><th>Lavozimi</th></tr>
+                    </thead>
+                </div>
+                <div class="col-xs-9">
+                    <tbody>
+                    @*for(city <- cities) {*@
+                        @*<tr>*@
+                            @*<td>@city.name</td>*@
+                            @*<td>@city.description</td>*@
+                            @*<td>@city.country</td>*@
+                            @*<td>*@
+                                @*<a href="">*@
+                                    @*<button class="btn btn-danger">Delete</button>*@
+                                @*</a>*@
+                            @*</td>*@
+                        @*</tr>*@
+                    @*}*@
+                    </tbody>
+                </div>
+            </div>
+        </table>
+    </div>
+}

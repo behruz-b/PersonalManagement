@@ -11,5 +11,8 @@ libraryDependencies ++= Seq( jdbc , anorm , cache , ws )
 libraryDependencies ++= Seq(
   "org.postgresql" % "postgresql" % "9.3-1100-jdbc4",
   "com.typesafe.slick" %% "slick" % "2.1.0" withJavadoc() withSources(),
-  "com.typesafe.play" %% "play-slick" % "0.8.0" withJavadoc() withSources()
+  "com.typesafe.play" %% "play-slick" % "0.8.0" withJavadoc() withSources(),
+  "com.typesafe.slick" % "slick_2.11" % "2.1.0",
+  "com.github.tototoshi" %% "slick-joda-mapper" % "1.2.0",
+  "com.typesafe.play" %% "play-slick" % "0.8.0"
 )
