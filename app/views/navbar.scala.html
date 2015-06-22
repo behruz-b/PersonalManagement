@@ -17,11 +17,13 @@
                     O'qituvchilar</b></a></li>
                 <li class="@if(activePage == "hodimlar") {active}"><a href="@routes.Hodimlar.hamma_hodimlar()"><b>
                     Hodimlar</b></a></li>
+                <li class="@if(activePage == "Xodimlar") {active}"><a href="@routes.Hodimlar.add()"><b>
+                    Hodimlarni qo'shish</b></a></li>
                 <li class="@if(activePage == "OqituvchilarRoyhati") {active}"><a href="@routes.Application.OqituvchilarRoyhati()"><b>
                     O'qituvchilarRoyhati</b></a></li>
                 <li class="@if(activePage == "registr") {active}"><a href="@routes.Malumot.registr()"><b>
-                    Talabalarni ro'yhatdan o'tirish</b></a></li>
-                <li class="@if(activePage == "list") {active}"><a href="@routes.Malumot.list()"><b>Talabalar ro'yhati</b></a></li>
+                    Talabalarni qo'shish</b></a></li>
+                <li class="@if(activePage == "list") {active}"><a href="@routes.Malumot.list()"><b>Talabalar</b></a></li>
             </ul>
             <form class="navbar-form navbar-right">
                 <input type="text" class="form-control" placeholder="Qidirish...">
