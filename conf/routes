@@ -3,13 +3,14 @@
 # ~~~~
 
 # Home page
-GET        /                         controllers.Application.index
-GET        /OqituvchilarAnketasi     controllers.Application.OqituvchilarAnketasi
-GET        /OqituvchilarRoyhati      controllers.Application.OqituvchilarRoyhati
-GET        /Xodimlar                 controllers.Application.Xodimlar
-GET        /XodimlarRoyhati          controllers.Application.XodimlarRoyhati
-GET        /TalabalarRoyhati          controllers.Application.TalabalarRoyhati
-GET        /manzil                   controllers.Application.manzil
+GET         /                         controllers.Application.index
+GET         /OqituvchilarAnketasi     controllers.Application.OqituvchilarAnketasi
+GET         /OqituvchilarRoyhati      controllers.Application.OqituvchilarRoyhati
+GET         /talabalar                controllers.Application.talabalar
+GET         /hodim/qushish            @controllers.Hodimlar.showAddForm
+POST        /hodim/qushish            @controllers.Hodimlar.add
+GET         /hamma_hodimar            @controllers.Hodimlar.hamma_hodimlar
+GET         /manzil                   controllers.Application.manzil
 
 
 # Map static resources from the /public folder to the /assets URL path
