@@ -19,7 +19,7 @@ class Hodimlar extends Controller{
 
   def hamma_hodimlar = DBAction { implicit rs =>
     Logger.info(s"SHOW_ALL = ${hodim_table.list}")
-    Ok(views.html.HodimlarRoyhati(hodim_table.list))
+    Ok(views.html.XodimlarRoyhati(hodim_table.list))
   }
 
   def showAddForm = Action {
