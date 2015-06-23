@@ -9,10 +9,12 @@ import play.api.db.slick.Config.driver.simple._
 case class talabalar(id: Option[Int],
                      name: String,
                      surname: String,
+                     second_name: String,
+                     tugulgan_sana: String,
+                     guruhi: String,
                      email: String,
-                     login: String,
-                     parol: String)
-class TalabalarRegistr(tag: Tag) extends Table[talabalar](tag, "Users") {
+                     tel: String)
+class TalabalarRegistr(tag: Tag) extends Table[talabalar](tag, "Talabalar") {
 
   def id = column[Int]("ID", O.PrimaryKey, O.AutoInc)
 
@@ -20,13 +22,17 @@ class TalabalarRegistr(tag: Tag) extends Table[talabalar](tag, "Users") {
 
   def surname = column[String]("surname", O.Default(""))
 
+  def second_name = column[String]("second_name", O.Default(""))
+
+  def tugulgan_sana = column[String]("tugulgan_sana", O.Default(""))
+
+  def guruhi = column[String]("guruhi", O.Default(""))
+
   def email = column[String]("email", O.Default(""))
 
-  def login = column[String]("login", O.Default(""))
+  def tel = column[String]("tel", O.Default(""))
 
-  def parol = column[String]("parol", O.Default(""))
-
-  def * = (id.?, name, surname, email, login, parol) <>(talabalar.tupled, talabalar.unapply _)
+  def * = (id.?, name, surname, second_name,tugulgan_sana,guruhi, email, tel) <>(talabalar.tupled, talabalar.unapply _)
 
 }
 

@@ -32,13 +32,16 @@ class Malumot  extends Controller{
     val set = i.body.asFormUrlEncoded
     val name = set.get("name")(0)
     val surname = set.get("surname")(0)
+    val second_name = set.get("second_name")(0)
+    val tugulgan_sana = set.get("tugulgan_sana")(0)
+    val guruhi = set.get("guruhi")(0)
+
     val email = set.get("email")(0)
-    val login = set.get("login")(0)
-    val parol = set.get("parol")(0)
+    val tel = set.get("tel")(0)
 
     println("Name: " + name)
     println("Name: " + name)
-    val UserId = (malumotlar returning malumotlar.map(_.id)) += talabalar(None, name, surname, email,login,parol)
+    val UserId = (malumotlar returning malumotlar.map(_.id)) += talabalar(None, name, surname,second_name,tugulgan_sana,guruhi ,email,tel)
     Redirect(routes.Malumot.list())
   }
 

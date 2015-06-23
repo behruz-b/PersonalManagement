@@ -7,40 +7,51 @@
   <div class="container main-content">
     <div class="row">
       <div class="col-xs-4 col-xs-offset-4">
-        <div class="panel panel-evolutions.default">
-          <div class="panel-heading text-center">
-            <strong>Ro'yhatdan o'tish</strong>
-          </div>
-          <div class="panel-body">
+
+
+            <h1><strong>Ro'yhatdan o'tish</strong></h1>
+
+
             <div class="row">
               <div class="col-lg-12">
 
 
                 <form class="@routes.Malumot.registr()" method="post">
                   <div class="form-group">
-                    <label for="inp-name" class="color-black">First name</label>
+                    <label for="inp-name" class="color-black"></label>
                     <input type="text" class="form-control" id="inp-name"
-                    name="name" required="" placeholder="First name">
+                    name="name" required="" placeholder="Ismi">
                   </div>
                   <div class="form-group">
-                    <label for="inp-surname" class="color-black">Last name</label>
+                    <label for="inp-surname" class="color-black"></label>
                     <input type="text" class="form-control" id="inp-surname"
-                    name="surname" required="" placeholder="Last name">
+                    name="surname" required="" placeholder="Familiyasi">
                   </div>
                   <div class="form-group">
-                    <label for="inp-email" class="color-black">Email</label>
+                    <label for="inp-second_name" class="color-black"></label>
+                    <input type="text" class="form-control" id="inp-second_name"
+                    placeholder="Otasining ismi" required="" name="second_name">
+                  </div>
+                  <div class="form-group">
+                    <label for="inp-tugulgan_sana" class="color-black"></label>
+                    <input type="date" class="form-control" id="inp-tugulgan_sana"
+                    placeholder="Tug'ulgan sanasi" required="" name="tugulgan_sana">
+                  </div>
+                  <div class="form-group">
+                    <label for="inp-guruhi" class="color-black"></label>
+                    <input type="text" class="form-control" id="inp-guruhi"
+                    name="guruhi" required="" placeholder="Gurugi misol:911-12">
+                  </div>
+                  <div class="form-group">
+                    <label for="inp-email" class="color-black"></label>
                     <input type="email" class="form-control" id="inp-email"
-                    name="email" required="" placeholder="Email">
+                    name="email" required="" placeholder="Elektron pochtasi">
                   </div>
+
                   <div class="form-group">
-                    <label for="inp-login" class="color-black">Login</label>
-                    <input type="text" class="form-control" id="inp-login"
-                    placeholder="Login" required="" name="login">
-                  </div>
-                  <div class="form-group">
-                    <label for="inp-parol" class="color-black">Password</label>
-                    <input type="password" class="form-control" id="inp-parol"
-                    placeholder="Password" required="" name="parol">
+                    <label for="inp-tel" class="color-black"></label>
+                    <input type="text" class="form-control" id="inp-tel"
+                     required="" name="tel" value="+998">
                   </div>
 
 
@@ -53,15 +64,15 @@
                   @*<br>*@
                   <br>
                   <button type="submit" class="btn btn-primary center-block text-center btn-block">
-                    Kirish</button>
+                    Ro'yhatdan o'tish</button>
                 </form>
               </div>
             </div>
 
             <br>
-          </div>
 
-        </div>
+
+
       </div>
     </div>
   </div>
