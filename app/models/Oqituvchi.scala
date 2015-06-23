@@ -1,10 +1,12 @@
 package models
 
-//import sun.security.krb5.internal.ccache.Tag
-//
-////import play.api.db.slick.Config.driver.simple._
+import scala.slick.direct.AnnotationMapper.column
 
-case class shahsiyMalumoti(id: Option[Int],
+import sun.security.krb5.internal.ccache.Tag
+
+import play.api.db.slick.Config.driver.simple._
+
+case class shahsiyMal(id: Option[Int],
                       name:String,
                       surname:String,
                       secondname: String,
@@ -24,13 +26,21 @@ case class Malumoti()
 
 case class oqituvchilarUchun()
 
-//class shahsiyTable(tag: Tag) extends Table[shahsiyMal](tag, "SHAHSIY"){
-//  def id = column[Int]("ID", O.PrimaryKey, O.AutoInc)
-//  def name = column[String]("NAME", O.Default(""))
-//  def surname = column[String]("SURNAME", O.Default(""))
-//  def secondname = column[String]("SECONDNAME", O.Default(""))
-//  def
-//
-//  def * = (id.?, name, surname, secondname) <> (oilaviyMal.tupled, oilaviyMal.unapply _)
-//
-//}
+class shahsiyTable(tag: Tag) extends Table[shahsiyMal](tag, "SHAHSIY"){
+  def id = column[Int]("ID", O.PrimaryKey, O.AutoInc)
+  def name = column[String]("NAME", O.Default(""))
+  def surname = column[String]("SURNAME", O.Default(""))
+  def secondname = column[String]("SECONDNAME", O.Default(""))
+
+  def day = column[String]("DAY", O.Default(""))
+  def month = column[String]("MONTH", O.Default(""))
+  def year = column[String]("YEAR", O.Default(""))
+
+  def passportSeries = column[String]("PASSPORTSERIES", O.Default(""))
+  def role = column[String]("ROLE", O.Default(""))
+  def department = column[String]("DEPARTMENT", O.Default(""))
+  def livingPlace = column[String]("LIVINGPLACE", O.Default(""))
+
+  def * = (id.?, name, surname, secondname, day, month, year, passportSeries, role, department, livingPlace) <> (shahsiyMal.tupled, shahsiyMal.unapply _)
+
+}
