@@ -6,7 +6,7 @@
 GET         /                            controllers.Application.index
 GET         /OqituvchilarAnketasi        controllers.Application.OqituvchilarAnketasi
 GET         /OqituvchilarRoyhati         controllers.Application.OqituvchilarRoyhati
-GET         /talabalar                   @controllers.Malumot.list
+GET         /talabalar_royhati                   @controllers.Malumot.list
 POST        /talabalar_registr           @controllers.Malumot.registr
 GET         /talabalar_registr           @controllers.Malumot.showAddForm
 GET         /talaba/:id/remove           @controllers.Malumot.remove(id: Int)
