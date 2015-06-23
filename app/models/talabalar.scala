@@ -7,32 +7,32 @@ import play.api.db.slick.Config.driver.simple._
  * Created by Eldorbek on 19.06.2015.
  */
 case class talabalar(id: Option[Int],
-                     name: String,
-                     surname: String,
-                     second_name: String,
+                     ismi: String,
+                     familiyasi: String,
+                     otasining_ismi: String,
                      tugulgan_sana: String,
                      guruhi: String,
-                     email: String,
+                     elektron_pochtasi: String,
                      tel: String)
-class TalabalarRegistr(tag: Tag) extends Table[talabalar](tag, "Talabalar") {
+class TalabalarQushish(tag: Tag) extends Table[talabalar](tag, "Talabalar") {
 
   def id = column[Int]("ID", O.PrimaryKey, O.AutoInc)
 
-  def name = column[String]("name", O.Default(""))
+  def ismi = column[String]("ismi", O.Default(""))
 
-  def surname = column[String]("surname", O.Default(""))
+  def familiyasi = column[String]("familiyasi", O.Default(""))
 
-  def second_name = column[String]("second_name", O.Default(""))
+  def otasining_ismi = column[String]("otasining_ismi", O.Default(""))
 
   def tugulgan_sana = column[String]("tugulgan_sana", O.Default(""))
 
   def guruhi = column[String]("guruhi", O.Default(""))
 
-  def email = column[String]("email", O.Default(""))
+  def elektron_pochtasi = column[String]("email", O.Default(""))
 
   def tel = column[String]("tel", O.Default(""))
 
-  def * = (id.?, name, surname, second_name,tugulgan_sana,guruhi, email, tel) <>(talabalar.tupled, talabalar.unapply _)
+  def * = (id.?, ismi, familiyasi , otasining_ismi,tugulgan_sana,guruhi, elektron_pochtasi, tel) <>(talabalar.tupled, talabalar.unapply _)
 
 }
 

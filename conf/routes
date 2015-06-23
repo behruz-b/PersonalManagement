@@ -4,10 +4,12 @@
 
 # Home page
 GET         /                            controllers.Application.index
-GET         /talabalar                   @controllers.Malumot.list
-POST        /talabalar_registr           @controllers.Malumot.registr
-GET         /talabalar_registr           @controllers.Malumot.showAddForm
-GET         /city/:id/remove             @controllers.Malumot.remove(id: Int)
+GET         /OqituvchilarAnketasi        controllers.Application.OqituvchilarAnketasi
+GET         /OqituvchilarRoyhati         controllers.Application.OqituvchilarRoyhati
+GET         /talabalar_royhati                   @controllers.Malumot.list
+POST        /talabalar_qushish           @controllers.Malumot.registr
+GET         /talabalar_qushish           @controllers.Malumot.showAddForm
+GET         /talaba/:id/ochirish           @controllers.Malumot.ochirish(id: Int)
 GET         /hodim/qushish               @controllers.Hodimlar.showAddForm
 POST        /hodim/qushish               @controllers.Hodimlar.add
 GET         /hamma_hodimar               @controllers.Hodimlar.hamma_hodimlar

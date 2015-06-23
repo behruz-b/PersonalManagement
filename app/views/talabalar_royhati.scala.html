@@ -2,7 +2,7 @@
 
 @main("Talabalar ro'yhati") {
 
-  @navbar("list")
+  @navbar("talabalar_royhati")
 
   <div class="container main-content">
 
@@ -23,15 +23,15 @@
       <tbody>
       @for(i <- talks) {
         <tr>
-          <td>@i.name</td>
-          <td>@i.surname</td>
-          <td>@i.second_name</td>
+          <td>@i.ismi</td>
+          <td>@i.familiyasi</td>
+          <td>@i.otasining_ismi</td>
           <td>@i.tugulgan_sana</td>
           <td>@i.guruhi</td>
-          <td>@i.email</td>
+          <td>@i.elektron_pochtasi</td>
           <td>@i.tel</td>
           <td>
-            <a href="@routes.Malumot.remove(i.id.get)">
+            <a href="@routes.Malumot.ochirish(i.id.get)">
               <button class="btn btn-danger">Delete</button>
             </a>
           </td>
