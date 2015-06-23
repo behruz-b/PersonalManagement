@@ -23,7 +23,7 @@ class Hodimlar extends Controller{
   }
 
   def showAddForm = Action {
-    Ok(views.html.hodimlar())
+    Ok(views.html.Xodimlar())
   }
 
   def add = DBAction { implicit request =>
