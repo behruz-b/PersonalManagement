@@ -1,6 +1,6 @@
 @(talks: List[talabalar])
 
-@main("Users list") {
+@main("Talabalar ro'yhati") {
 
   @navbar("list")
 
@@ -10,11 +10,13 @@
     <table class="table">
       <thead>
         <tr>
-          <th>Name</th>
-          <th>Surname</th>
-          <th>Email</th>
-          <th>Login</th>
-          <th>Parol</th>
+          <th>Ismi</th>
+          <th>Familiyasi</th>
+          <th>Otasining ismi</th>
+          <th>Tug'ulgan sanasi</th>
+          <th>Guruhi</th>
+          <th>Elektron pochtasi</th>
+          <th>Telefon</th>
           <th>O'chirish</th>
         </tr>
       </thead>
@@ -23,9 +25,11 @@
         <tr>
           <td>@i.name</td>
           <td>@i.surname</td>
+          <td>@i.second_name</td>
+          <td>@i.tugulgan_sana</td>
+          <td>@i.guruhi</td>
           <td>@i.email</td>
-          <td>@i.login</td>
-          <td>@i.parol</td>
+          <td>@i.tel</td>
           <td>
             <a href="@routes.Malumot.remove(i.id.get)">
               <button class="btn btn-danger">Delete</button>
