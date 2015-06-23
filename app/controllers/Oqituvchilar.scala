@@ -23,9 +23,7 @@ class Oqituvchilar extends Controller{
     val name = formParams.get("name")(0)
     val surname = formParams.get("name")(0)
     val secondname = formParams.get("name")(0)
-    val day = formParams.get("day")(0)
-    val month = formParams.get("month")(0)
-    val year = formParams.get("year")(0)
+    val dateofbirth  = formParams.get("day")(0)
     val passportSeries = formParams.get("passportSeries")(0)
     val role = formParams.get("role")(0)
     val department = formParams.get("department")(0)
@@ -33,7 +31,7 @@ class Oqituvchilar extends Controller{
 
 
     val oqitId = (oqituvchilar returning oqituvchilar.map(_.id)) += shahsiyMal(None, name, surname, secondname,
-      day, month, year, passportSeries, role, department, livingPlace)
+      dateofbirth , passportSeries, role, department, livingPlace)
     Logger.info(s"LastId = $oqitId")
     Redirect(routes.Oqituvchilar.oqituvchiList())
   }
@@ -41,26 +39,31 @@ class Oqituvchilar extends Controller{
 
   def remove(id: Int) = DBAction { implicit request =>
     oqituvchilar.filter(_.id === id).delete;
-    Redirect(routes.Oqituvchi.oqituvchiList())
+    Redirect(routes.Oqituvchilar.oqituvchiList())
   }
 
-//  def update(id: Int) = DBAction { implicit rs =>
-//    val formParams = rs.body.asFormUrlEncoded
-//    val name = formParams.get("name")(0)
-//    val description = formParams.get("description")(0)
-//    val country = formParams.get("country")(0)
-//
-//    val city = City(Some(id), name, description, country)
-//    cities.filter(_.id === id).update(city)
-//
-//    Redirect(routes.Cities.list())
-//  }
+  def update(id: Int) = DBAction { implicit rs =>
+    val formParams = rs.body.asFormUrlEncoded
+    val name = formParams.get("name")(0)
+    val surname = formParams.get("name")(0)
+    val secondname = formParams.get("name")(0)
+    val dateofbirth  = formParams.get("day")(0)
+    val passportSeries = formParams.get("passportSeries")(0)
+    val role = formParams.get("role")(0)
+    val department = formParams.get("department")(0)
+    val livingPlace = formParams.get("livingPlace")(0)
 
-//  def showEditForm(cityId: Int) = DBAction { implicit request =>
-//    val byId = cities.findBy(_.id)
-//    val city = byId(cityId).list.head
-//
-//    Ok(views.html.edit(city))
-//  }
+    val oqituvchi = shahsiyMal(Some(id), name, surname, secondname, dateofbirth, passportSeries, role, department, livingPlace)
+    oqituvchilar.filter(_.id === id).update(oqituvchi)
+
+    Redirect(routes.Oqituvchilar.oqituvchiList())
+  }
+
+  def showEditForm(oqitId: Int) = DBAction { implicit request =>
+    val byId = oqituvchilar.findBy(_.id)
+    val oqit = byId(oqitId).list.head
+
+    Ok(views.html.OqituvchiAnketasi(oqit))
+  }
 
 }

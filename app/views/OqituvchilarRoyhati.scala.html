@@ -1,3 +1,4 @@
+@(oqituvchilar: List[shahsiyMal])
 @main("OqituvchilarRoyhati") {
     @navbar("OqituvchilarRoyhati")
     <div class="container">
@@ -9,25 +10,25 @@
                         <tr><th>Ismi</th></tr>
                         <tr><th>Familiyasi</th></tr>
                         <tr><th>Otasining ismi</th></tr>
-                        <tr><th>Tug'ilgan yilith</th></tr>
-                        <tr><th>Bo'lim (kafedra)</th></tr>
+                        <tr><th>Tug'ilgan sanasi</th></tr>
+                        <tr><th>Pasport seriyasi</th></tr>
                         <tr><th>Lavozimi</th></tr>
+                        <tr><th>Bo'lim (kafedra)</th></tr>
+                        <tr><th>Yashash manzili</th></tr>
                     </thead>
                 </div>
                 <div class="col-xs-9">
                     <tbody>
-                    @*for(city <- cities) {*@
-                        @*<tr>*@
-                            @*<td>@city.name</td>*@
-                            @*<td>@city.description</td>*@
-                            @*<td>@city.country</td>*@
-                            @*<td>*@
-                                @*<a href="">*@
-                                    @*<button class="btn btn-danger">Delete</button>*@
-                                @*</a>*@
-                            @*</td>*@
-                        @*</tr>*@
-                    @*}*@
+                    @for(oqituvchi <- oqituvchilar){
+                        <tr>
+                            <td>@(oqituvchi.name + " "+ oqituvchi.surname + " " + oqituvchi.secondname)</td>
+                            <td>@oqituvchi.dateofbirth</td>
+                            <td>@oqituvchi.passportSeries</td>
+                            <td>@oqituvchi.role</td>
+                            <td>@oqituvchi.department</td>
+                            <td>@oqituvchi.livingPlace</td>
+                        </tr>
+                    }
                     </tbody>
                 </div>
             </div>

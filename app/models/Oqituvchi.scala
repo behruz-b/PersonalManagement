@@ -2,8 +2,6 @@ package models
 
 import scala.slick.direct.AnnotationMapper.column
 
-import sun.security.krb5.internal.ccache.Tag
-
 import play.api.db.slick.Config.driver.simple._
 
 case class shahsiyMal(id: Option[Int],
@@ -11,9 +9,7 @@ case class shahsiyMal(id: Option[Int],
                       surname:String,
                       secondname: String,
 
-                      day:String,
-                      month:String,
-                      year:String,
+                      dateofbirth :String,
 
                       passportSeries:String,
                       role:String,
@@ -32,15 +28,13 @@ class shahsiyTable(tag: Tag) extends Table[shahsiyMal](tag, "SHAHSIY"){
   def surname = column[String]("SURNAME", O.Default(""))
   def secondname = column[String]("SECONDNAME", O.Default(""))
 
-  def day = column[String]("DAY", O.Default(""))
-  def month = column[String]("MONTH", O.Default(""))
-  def year = column[String]("YEAR", O.Default(""))
+  def dateofbirth  = column[String]("DATEOFBIRTH", O.Default(""))
 
   def passportSeries = column[String]("PASSPORTSERIES", O.Default(""))
   def role = column[String]("ROLE", O.Default(""))
   def department = column[String]("DEPARTMENT", O.Default(""))
   def livingPlace = column[String]("LIVINGPLACE", O.Default(""))
 
-  def * = (id.?, name, surname, secondname, day, month, year, passportSeries, role, department, livingPlace) <> (shahsiyMal.tupled, shahsiyMal.unapply _)
+  def * = (id.?, name, surname, secondname, dateofbirth , passportSeries, role, department, livingPlace) <> (shahsiyMal.tupled, shahsiyMal.unapply _)
 
 }

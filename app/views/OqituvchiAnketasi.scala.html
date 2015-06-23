@@ -1,4 +1,4 @@
-<!-- CONTACT -->
+@(oqituvchi: shahsiyMal)
 @main("PersonalManagement") {
     @navbar("O'qituvchi")
 
@@ -14,25 +14,29 @@
                 <div class="row">
                     <form class="" action="#" method="post">
                         <div>
-                            <input type="text" name="Ismi" placeholder="Ismi...">
+                            <input type="text" name="Ismi" placeholder="Ismi..." value="@oqituvchi.name">
                         </div>
                         <br>
                         <div>
-                            <input type="email" name="Familyasi" placeholder="Familyasi...">
+                            <input type="text" name="Familyasi" placeholder="Familyasi..." value="@oqituvchi.surname">
                         </div>
                         <br>
                         <div>
-                            <input type="text" name="Otasining ismi" placeholder="Otasining ismi...">
+                            <input type="text" name="Otasining ismi" placeholder="Otasining ismi..." value="@oqituvchi.secondname">
                         </div>
                         <br>
                         <div class="text-center">
-                            <label for="date"><b>Tugilgan sana: </b> </label>
-                            <input type="date" id="date" name="Tugilgan sana">
+                            <label for="date"><b>Tug'ilgan sana: </b> </label>
+                            <input type="date" id="date" name="Tugilgan sana" value="@oqituvchi.dateofbirth">
                         </div>
                         <br>
+                        <div>
+                            <input type="text" name="passportSeries" placeholder="Pasport seriyasi..." value="@oqituvchi.passportSeries">
+                        </div>
+                        <br/>
 
                         <div class="col-md-6">
-                            <select class="form-control" data-val="true" data-val-number="The field EduType_ID must be a number." id="EduType_ID" name="EduType_ID"><option value="">
+                            <select class="form-control" data-val="true" data-val-number="The field EduType_ID must be a number." id="EduType_ID" name="EduType_ID"><option value="@oqituvchi.department">
                                 ---Bolim (Kafedra)---</option>
                                 <option value="1">Kompyuter injineringi</option>
                                 <option value="2">Telekomunikatsiya injineringi</option>
@@ -41,7 +45,7 @@
                         <div class="form-group">
 
                             <div class="col-md-6">
-                                <select class="form-control" data-val="true" data-val-number="The field Position_ID must be a number." id="Position_ID" name="Position_ID"><option value="141">
+                                <select class="form-control" data-val="true" data-val-number="The field Position_ID must be a number." id="Position_ID" name="Position_ID"><option value="@oqituvchi.role">
                                     Lavozimi</option>
                                     <option value="4">Rektor (Filial direktori)</option>
                                     <option value="5">

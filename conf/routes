@@ -13,7 +13,7 @@ POST        /hodim/qushish               @controllers.Hodimlar.add
 GET         /hamma_hodimar               @controllers.Hodimlar.hamma_hodimlar
 GET         /manzil                      controllers.Application.manzil
 GET         /boshSahifa                  controllers.Application.boshSahifa
-GET         /o'qituvcilar/royhati        @controllers.Oqituvchilar.oqituvchiList
+GET         /o'qituvchilar/royhati       @controllers.Oqituvchilar.oqituvchiList
 
 # Map static resources from the /public folder to the /assets URL path
 GET         /assets/*file                controllers.Assets.at(path="/public", file)
