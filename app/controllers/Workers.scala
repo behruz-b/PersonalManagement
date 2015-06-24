@@ -15,18 +15,18 @@ import scala.slick.lifted.TableQuery
 
 class Workers extends Controller{
 
-  val hodim_table = TableQuery[HodimTable]
+  val personalDataW = TableQuery[PersonalDataTableW]
 
-  def hamma_hodimlar = DBAction { implicit rs =>
-    Logger.info(s"SHOW_ALL = ${hodim_table.list}")
-    Ok(views.html.XodimlarRoyhati(hodim_table.list))
+  def workersList = DBAction { implicit rs =>
+    Logger.info(s"SHOW_ALL = ${personalDataW.list}")
+    Ok(views.html.workersList(personalDataW.list))
   }
 
   def showAddForm = Action {
-    Ok(views.html.Xodimlar())
+    Ok(views.html.addWorker())
   }
 
-  def add = DBAction { implicit request =>
+  def addWorkers = DBAction { implicit request =>
     val formParams = request.body.asFormUrlEncoded
     val First_name = formParams.get("First_name")(0)
     val Last_name = formParams.get("Last_name")(0)
@@ -35,13 +35,13 @@ class Workers extends Controller{
     val Commission = formParams.get("Commission")(0)
     val Birthday = formParams.get("Birthday")(0)
 
-    val hodimId = (hodim_table returning hodim_table.map(_.id)) += Hodim(None, First_name, Last_name, Second_name, Department, Commission, Birthday)
-    Redirect(routes.Workers.hamma_hodimlar())
+    val workerId = (personalDataW returning personalDataW.map(_.id)) += PersonalDataW(None, First_name, Last_name, Second_name, Department, Commission, Birthday)
+    Redirect(routes.Workers.workersList())
   }
 
   def remove(id: Int) = DBAction { implicit request =>
-    hodim_table.filter(_.id === id).delete
-    Redirect(routes.Workers.hamma_hodimlar())
+    personalDataW.filter(_.id === id).delete
+    Redirect(routes.Workers.workersList())
   }
 
 }

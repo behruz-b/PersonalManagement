@@ -4,18 +4,24 @@
 
 # Home page
 GET         /                            controllers.Application.index
-GET         /OqituvchilarAnketasi        controllers.Application.OqituvchilarAnketasi
-GET         /OqituvchilarRoyhati         controllers.Application.OqituvchilarRoyhati
-GET         /talabalar_royhati                   @controllers.Malumot.list
-POST        /talabalar_qushish           @controllers.Malumot.registr
-GET         /talabalar_qushish           @controllers.Malumot.showAddForm
-GET         /talaba/:id/ochirish           @controllers.Malumot.ochirish(id: Int)
-GET         /hodim/qushish               @controllers.Workers.showAddForm
-POST        /hodim/qushish               @controllers.Workers.add
-GET         /hamma_hodimar               @controllers.Workers.hamma_hodimlar
+GET         /homePage                    controllers.Application.homePage
+
+POST        /addTeachers                 @controllers.Teachers.addTeachers
+GET         /addTeachers                 @controllers.Teachers.addTeachers
+GET         /studentsTeachers            @controllers.Teachers.teachersList
+
+POST        /addStudents                 @controllers.Students.addStudents
+GET         /addStudents                 @controllers.Students.showAddForm
+GET         /studentsList                @controllers.Students.studentsList
+GET         /student/:id/remove          @controllers.Students.remove(id: Int)
+
+POST        /addWorkers                  @controllers.Workers.addWorkers
+GET         /addWorkers                  @controllers.Workers.showAddForm
+GET         /workersList                 @controllers.Workers.workersList
+
 GET         /manzil                      controllers.Application.manzil
-GET         /boshSahifa                  controllers.Application.boshSahifa
-GET         /o'qituvchilar/royhati       @controllers.Teachers.oqituvchiList
+
+
 
 # Map static resources from the /public folder to the /assets URL path
 GET         /assets/*file                controllers.Assets.at(path="/public", file)

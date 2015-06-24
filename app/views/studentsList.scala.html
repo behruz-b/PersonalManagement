@@ -1,4 +1,4 @@
-@(talks: List[talabalar])
+@(students: List[PersonalDataS])
 
 @main("Talabalar ro'yhati") {
 
@@ -21,7 +21,7 @@
         </tr>
       </thead>
       <tbody>
-      @for(i <- talks) {
+      @for(i <- students) {
         <tr>
           <td>@i.ismi</td>
           <td>@i.familiyasi</td>
@@ -31,7 +31,7 @@
           <td>@i.elektron_pochtasi</td>
           <td>@i.tel</td>
           <td>
-            <a href="@routes.Malumot.ochirish(i.id.get)">
+            <a href="@routes.Students.remove(i.id.get)">
               <button class="btn btn-danger">Delete</button>
             </a>
           </td>

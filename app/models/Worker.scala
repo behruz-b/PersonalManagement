@@ -7,7 +7,7 @@ package models
 import play.api.db.slick.Config.driver.simple._
 
 
-case class Hodim(id: Option[Int],
+case class PersonalDataW(id: Option[Int],
                  First_name: String,
                  Last_name: String,
                  Second_name: String,
@@ -15,11 +15,8 @@ case class Hodim(id: Option[Int],
                  Commission: String,
                  Birthday: String)
 
-case class FamilyMembers()
 
-case class About()
-
-class HodimTable(tag: Tag) extends  Table[Hodim](tag, "Hodimlar"){
+class PersonalDataTableW(tag: Tag) extends  Table[PersonalDataW](tag, "Workers"){
 
   def id = column[Int]("ID", O.PrimaryKey, O.AutoInc)
 
@@ -35,6 +32,8 @@ class HodimTable(tag: Tag) extends  Table[Hodim](tag, "Hodimlar"){
 
   def Birthday = column[String]("BIRTHDAY", O.Default(""))
 
-  def * = (id.?, First_name, Last_name, Second_name, Department, Commission, Birthday) <> (Hodim.tupled, Hodim.unapply _)
+  def * = (id.?, First_name, Last_name, Second_name, Department, Commission, Birthday) <> (PersonalDataW.tupled, PersonalDataW.unapply _)
 
 }
+case class FamilyMembersW()
+class FamilyMembersTableW()

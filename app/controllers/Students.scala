@@ -1,31 +1,25 @@
 package controllers
-
-
-import play.api.mvc._
-import play.api.db.slick.Config.driver.simple._
-import play.api.db.slick._
 import models._
 import play.api.Logger
-
+import play.api.db.slick.Config.driver.simple._
+import play.api.db.slick._
+import play.api.mvc._
 import scala.slick.lifted.TableQuery
+class Students extends Controller{
+  val personalDataS = TableQuery[PersonalDataTableS]
 
+  def studentsList = DBAction { implicit rs =>
+    Logger.info(s"SHOW_ALL = ${personalDataS.list}")
 
-class Malumot extends Controller {
-
-  val malumotlar = TableQuery[TalabalarQushish]
-
-  def list = DBAction { implicit rs =>
-    Logger.info(s"SHOW_ALL = ${malumotlar.list}")
-
-    Ok(views.html.talabalar_royhati(malumotlar.list))
+    Ok(views.html.studentsList(personalDataS.list))
   }
 
 
   def showAddForm = Action {
-    Ok(views.html.talabalar_qushish())
+    Ok(views.html.addStudent())
   }
 
-  def registr = DBAction { implicit i =>
+  def addStudents = DBAction { implicit i =>
     val set = i.body.asFormUrlEncoded
     val ismi = set.get("ismi")(0)
     val familiyasi = set.get("familiyasi")(0)
@@ -37,14 +31,15 @@ class Malumot extends Controller {
 
     println("Name: " + ismi)
     println("Name: " + ismi)
-    val UserId = (malumotlar returning malumotlar.map(_.id)) += talabalar(None, ismi, familiyasi, otasining_ismi, tugulgan_sana, guruhi, elektron_pochtasi, tel)
-    Redirect(routes.Malumot.list())
+    val studentId = (personalDataS returning personalDataS.map(_.id)) += PersonalDataS(None, ismi, familiyasi, otasining_ismi, tugulgan_sana, guruhi, elektron_pochtasi, tel)
+    Redirect(routes.Students.studentsList())
   }
 
 
-  def ochirish(id: Int) = DBAction { implicit request =>
-    malumotlar.filter(_.id === id).delete;
-    Redirect(routes.Malumot.list())
+  def remove(id: Int) = DBAction { implicit request =>
+    personalDataS.filter(_.id === id).delete;
+    Redirect(routes.Students.studentsList())
   }
+
 
 }

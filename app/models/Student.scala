@@ -6,7 +6,7 @@ import play.api.db.slick.Config.driver.simple._
 /**
  * Created by Eldorbek on 19.06.2015.
  */
-case class talabalar(id: Option[Int],
+case class PersonalDataS(id: Option[Int],
                      ismi: String,
                      familiyasi: String,
                      otasining_ismi: String,
@@ -14,7 +14,7 @@ case class talabalar(id: Option[Int],
                      guruhi: String,
                      elektron_pochtasi: String,
                      tel: String)
-class TalabalarQushish(tag: Tag) extends Table[talabalar](tag, "Talabalar") {
+class PersonalDataTableS(tag: Tag) extends Table[PersonalDataS](tag, "Students") {
 
   def id = column[Int]("ID", O.PrimaryKey, O.AutoInc)
 
@@ -32,7 +32,7 @@ class TalabalarQushish(tag: Tag) extends Table[talabalar](tag, "Talabalar") {
 
   def tel = column[String]("tel", O.Default(""))
 
-  def * = (id.?, ismi, familiyasi , otasining_ismi,tugulgan_sana,guruhi, elektron_pochtasi, tel) <>(talabalar.tupled, talabalar.unapply _)
+  def * = (id.?, ismi, familiyasi , otasining_ismi,tugulgan_sana,guruhi, elektron_pochtasi, tel) <>(PersonalDataS.tupled,PersonalDataS.unapply _)
 
 }
 

@@ -1,8 +1,8 @@
 @()
 
-@main("Ro'yxatdan o'tish") {
+@main("Talabalarni qo'shish") {
 
-  @navbar("registr")
+  @navbar("addStudents")
 
   <div class="container main-content">
     <div class="row">
@@ -16,7 +16,7 @@
               <div class="col-lg-12">
 
 
-                <form class="@routes.Malumot.registr()" method="post">
+                <form class="@routes.Students.addStudents()" method="post">
                   <div class="form-group">
                     <label for="inp-ismi" class="color-black"></label>
                     <input type="text" class="form-control" id="inp-ismi"

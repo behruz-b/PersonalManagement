@@ -8,20 +8,26 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="@routes.Application.boshSahifa()">Bosh sahifa</a>
+            <a class="navbar-brand" href="@routes.Application.homePage()">Bosh sahifa</a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                @*<li class="@if(activePage == "O'qituvchi") {active}"><a href="@routes.Application.OqituvchilarAnketasi()"><b>*@
-                @*O'qituvchilar</b></a></li>*@
-                <li class="@if(activePage == "Xodimlar") {active}"><a href="@routes.Workers.hamma_hodimlar()"><b>
-                    Hodimlar</b></a></li>
-                <li class="@if(activePage == "oqituvchilarRoyhati") {active}"><a href="@routes.Teachers.oqituvchiList()"><b>
-                    O'qituvchilarRoyhati</b></a></li>
-                <li class="@if(activePage == "registr") {active}"><a href="@routes.Malumot.registr()"><b>
+                <li class="@if(activePage == "addTeacher") {active}"><a href="@routes.Teachers.addTeachers()"><b>
+                O'qituvchilarni qo'shish</b></a></li>
+                <li class="@if(activePage == "addWorker") {active}"><a href="@routes.Workers.addWorkers()"><b>
+                    Hodimlarni qo'shish</b></a></li>
+                <li class="@if(activePage == "addStudent") {active}"><a href="@routes.Students.addStudents()"><b>
                     Talabalarni qo'shish</b></a></li>
-                <li class="@if(activePage == "studentsList") {active}"><a href="@routes.Malumot.list()"><b>Talabalar ro'yhati</b></a></li>
+                <li class="@if(activePage == "teacherList") {active}"><a href="@routes.Teachers.teachersList()"><b>
+                O'qituvchilar ro'yhati</b></a></li
+                <li class="@if(activePage == "workerList") {active}"><a href="@routes.Workers.workersList()"><b>
+                Xodimlar ro'yhati</b></a></li>
+                <li class="@if(activePage == "studentsList") {active}"><a href="@routes.Students.studentsList()"><b>
+                    Talabalar ro'yhati</b></a></li>
             </ul>
             <form class="navbar-form navbar-right">
                 <input type="text" class="form-control" placeholder="Qidirish...">

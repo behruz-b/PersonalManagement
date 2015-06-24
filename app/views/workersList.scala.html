@@ -1,4 +1,4 @@
-@(hodimlar: List[Hodim])
+@(workers: List[PersonalDataW])
 
 @main("HodimlarRoyxati"){
 
@@ -25,12 +25,12 @@
                 </tr>
             </thead>
             <tbody>
-            @for(hodim <- hodimlar){
+            @for(i <- workers){
                 <tr>
-                    <td>@(hodim.First_name + " "+ hodim.Last_name + " " + hodim.Second_name)</td>
-                    <td>@hodim.Birthday</td>
-                    <td>@hodim.Department</td>
-                    <td>@hodim.Commission</td>
+                    <td>@(i.First_name + " "+ i.Last_name + " " + i.Second_name)</td>
+                    <td>@i.Birthday</td>
+                    <td>@i.Department</td>
+                    <td>@i.Commission</td>
                 </tr>
             }
             </tbody>

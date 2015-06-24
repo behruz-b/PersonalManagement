@@ -10,15 +10,17 @@ import play.api.libs.json.Json
 
 import scala.slick.lifted.TableQuery
 class Teachers extends Controller{
-  val oqituvchilar=TableQuery[shahsiyTable]
+  val personalDataT=TableQuery[PersonalDataTableT]
 
-  def oqituvchiList = DBAction { implicit rs =>
-    Logger.info(s"SHOW_ALL = ${oqituvchilar.list}")
-    Ok(views.html.OqituvchilarRoyhati(oqituvchilar.list))
+  def teachersList = DBAction { implicit rs =>
+    Logger.info(s"SHOW_ALL = ${personalDataT.list}")
+    Ok(views.html.teacherList(personalDataT.list))
+  }
+  def showAddForm = Action {
+    Ok(views.html.addTeacher())
   }
 
-
-  def addOqit = DBAction { implicit request =>
+  def addTeachers = DBAction { implicit request =>
     val formParams = request.body.asFormUrlEncoded
     val name = formParams.get("name")(0)
     val surname = formParams.get("name")(0)
@@ -29,17 +31,16 @@ class Teachers extends Controller{
     val department = formParams.get("department")(0)
     val livingPlace = formParams.get("livingPlace")(0)
 
-
-    val oqitId = (oqituvchilar returning oqituvchilar.map(_.id)) += shahsiyMal(None, name, surname, secondname,
+    val teacherId = (personalDataT returning personalDataT.map(_.id)) += PersonalDataT(None, name, surname, secondname,
       dateofbirth , passportSeries, role, department, livingPlace)
-    Logger.info(s"LastId = $oqitId")
-    Redirect(routes.Teachers.oqituvchiList())
+    Logger.info(s"LastId = $teacherId")
+    Redirect(routes.Teachers.teachersList())
   }
 
 
   def remove(id: Int) = DBAction { implicit request =>
-    oqituvchilar.filter(_.id === id).delete;
-    Redirect(routes.Teachers.oqituvchiList())
+    personalDataT.filter(_.id === id).delete;
+    Redirect(routes.Teachers.teachersList())
   }
 
   def update(id: Int) = DBAction { implicit rs =>
@@ -53,17 +54,17 @@ class Teachers extends Controller{
     val department = formParams.get("department")(0)
     val livingPlace = formParams.get("livingPlace")(0)
 
-    val oqituvchi = shahsiyMal(Some(id), name, surname, secondname, dateofbirth, passportSeries, role, department, livingPlace)
-    oqituvchilar.filter(_.id === id).update(oqituvchi)
+    val teacher = PersonalDataT(Some(id), name, surname, secondname, dateofbirth, passportSeries, role, department, livingPlace)
+    personalDataT.filter(_.id === id).update(teacher)
 
-    Redirect(routes.Teachers.oqituvchiList())
+    Redirect(routes.Teachers.teachersList())
   }
 
-  def showEditForm(oqitId: Int) = DBAction { implicit request =>
-    val byId = oqituvchilar.findBy(_.id)
-    val oqit = byId(oqitId).list.head
-
-    Ok(views.html.OqituvchiAnketasi(oqit))
-  }
+//  def showEditForm(teacherId: Int) = DBAction { implicit request =>
+//    val byId = personalDataT.findBy(_.id)
+//    val teacher = byId(teacherId).list.head
+//
+//    Ok(views.html.OqituvchiAnketasi(teacher))
+//  }
 
 }

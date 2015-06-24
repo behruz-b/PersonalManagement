@@ -4,7 +4,7 @@ import scala.slick.direct.AnnotationMapper.column
 
 import play.api.db.slick.Config.driver.simple._
 
-case class shahsiyMal(id: Option[Int],
+case class PersonalDataT(id: Option[Int],
                       name:String,
                       surname:String,
                       secondname: String,
@@ -16,13 +16,7 @@ case class shahsiyMal(id: Option[Int],
                       department:String,
                       livingPlace:String)
 
-case class oilaviyMal()
-
-case class Malumoti()
-
-case class oqituvchilarUchun()
-
-class shahsiyTable(tag: Tag) extends Table[shahsiyMal](tag, "SHAHSIY"){
+class PersonalDataTableT(tag: Tag) extends Table[PersonalDataT](tag, "Teachers"){
   def id = column[Int]("ID", O.PrimaryKey, O.AutoInc)
   def name = column[String]("NAME", O.Default(""))
   def surname = column[String]("SURNAME", O.Default(""))
@@ -35,6 +29,8 @@ class shahsiyTable(tag: Tag) extends Table[shahsiyMal](tag, "SHAHSIY"){
   def department = column[String]("DEPARTMENT", O.Default(""))
   def livingPlace = column[String]("LIVINGPLACE", O.Default(""))
 
-  def * = (id.?, name, surname, secondname, dateofbirth , passportSeries, role, department, livingPlace) <> (shahsiyMal.tupled, shahsiyMal.unapply _)
+  def * = (id.?, name, surname, secondname, dateofbirth , passportSeries, role, department, livingPlace) <> (PersonalDataT.tupled, PersonalDataT.unapply _)
 
 }
+case class FamilyMembersT()
+class FamilylMembersTableT()
