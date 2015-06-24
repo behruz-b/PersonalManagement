@@ -9,7 +9,7 @@ import play.api.libs.json.Json._
 import play.api.libs.json.Json
 
 import scala.slick.lifted.TableQuery
-class Oqituvchilar extends Controller{
+class Teachers extends Controller{
   val oqituvchilar=TableQuery[shahsiyTable]
 
   def oqituvchiList = DBAction { implicit rs =>
@@ -33,13 +33,13 @@ class Oqituvchilar extends Controller{
     val oqitId = (oqituvchilar returning oqituvchilar.map(_.id)) += shahsiyMal(None, name, surname, secondname,
       dateofbirth , passportSeries, role, department, livingPlace)
     Logger.info(s"LastId = $oqitId")
-    Redirect(routes.Oqituvchilar.oqituvchiList())
+    Redirect(routes.Teachers.oqituvchiList())
   }
 
 
   def remove(id: Int) = DBAction { implicit request =>
     oqituvchilar.filter(_.id === id).delete;
-    Redirect(routes.Oqituvchilar.oqituvchiList())
+    Redirect(routes.Teachers.oqituvchiList())
   }
 
   def update(id: Int) = DBAction { implicit rs =>
@@ -56,7 +56,7 @@ class Oqituvchilar extends Controller{
     val oqituvchi = shahsiyMal(Some(id), name, surname, secondname, dateofbirth, passportSeries, role, department, livingPlace)
     oqituvchilar.filter(_.id === id).update(oqituvchi)
 
-    Redirect(routes.Oqituvchilar.oqituvchiList())
+    Redirect(routes.Teachers.oqituvchiList())
   }
 
   def showEditForm(oqitId: Int) = DBAction { implicit request =>

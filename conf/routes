@@ -10,12 +10,12 @@ GET         /talabalar_royhati                   @controllers.Malumot.list
 POST        /talabalar_qushish           @controllers.Malumot.registr
 GET         /talabalar_qushish           @controllers.Malumot.showAddForm
 GET         /talaba/:id/ochirish           @controllers.Malumot.ochirish(id: Int)
-GET         /hodim/qushish               @controllers.Hodimlar.showAddForm
-POST        /hodim/qushish               @controllers.Hodimlar.add
-GET         /hamma_hodimar               @controllers.Hodimlar.hamma_hodimlar
+GET         /hodim/qushish               @controllers.Workers.showAddForm
+POST        /hodim/qushish               @controllers.Workers.add
+GET         /hamma_hodimar               @controllers.Workers.hamma_hodimlar
 GET         /manzil                      controllers.Application.manzil
 GET         /boshSahifa                  controllers.Application.boshSahifa
-GET         /o'qituvchilar/royhati       @controllers.Oqituvchilar.oqituvchiList
+GET         /o'qituvchilar/royhati       @controllers.Teachers.oqituvchiList
 
 # Map static resources from the /public folder to the /assets URL path
 GET         /assets/*file                controllers.Assets.at(path="/public", file)

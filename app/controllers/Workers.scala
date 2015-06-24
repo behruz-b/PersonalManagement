@@ -13,7 +13,7 @@ import play.api.Logger
 import scala.slick.lifted.TableQuery
 
 
-class Hodimlar extends Controller{
+class Workers extends Controller{
 
   val hodim_table = TableQuery[HodimTable]
 
@@ -36,12 +36,12 @@ class Hodimlar extends Controller{
     val Birthday = formParams.get("Birthday")(0)
 
     val hodimId = (hodim_table returning hodim_table.map(_.id)) += Hodim(None, First_name, Last_name, Second_name, Department, Commission, Birthday)
-    Redirect(routes.Hodimlar.hamma_hodimlar())
+    Redirect(routes.Workers.hamma_hodimlar())
   }
 
   def remove(id: Int) = DBAction { implicit request =>
     hodim_table.filter(_.id === id).delete
-    Redirect(routes.Hodimlar.hamma_hodimlar())
+    Redirect(routes.Workers.hamma_hodimlar())
   }
 
 }

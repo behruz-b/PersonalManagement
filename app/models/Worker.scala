@@ -15,9 +15,9 @@ case class Hodim(id: Option[Int],
                  Commission: String,
                  Birthday: String)
 
-case class H_OilaviyMalumot()
+case class FamilyMembers()
 
-case class H_Malumoti()
+case class About()
 
 class HodimTable(tag: Tag) extends  Table[Hodim](tag, "Hodimlar"){
 
