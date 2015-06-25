@@ -9,9 +9,7 @@ object Application extends Controller {
 
   }
 
-  def manzil = Action{
-    Ok(views.html.manzil())
-  }
+
   def homePage = Action{
     Ok(views.html.homePage())
   }

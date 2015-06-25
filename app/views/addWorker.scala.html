@@ -4,203 +4,508 @@
     @navbar("addWorkers")
 
     <div class="container">
-        @navtabs("asosiy")
-        <div class="row">
-            <div class="col-md-12 text-center section-header">
-                <h1 class="section-title">Hodimning shaxsiy ma'lumotlarini kiritish</h1>
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <div class="text-center">
+                    <h1 class="text-primary"><i>Xodimlarning shaxsiy ma'lumotlarini kiritish</i></h1>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3"></div>
+            <div class="panel-body">
+                <ul class="nav nav-tabs">
+                    <li class="active" ><a href="#umumiy"  data-toggle="tab" title="Umumiy holat" >Umumiy</a></li>
+                    <li ><a href="#manzil" data-toggle="tab" title="Manzil Malumotlarni kiritish" >Manzil</a></li>
+                    <li ><a href="#pasport" data-toggle="tab" title="Pasport Malumotlarni kiritish" >Pasport</a></li>
+                    <li ><a href="#mehnatDaftar" data-toggle="tab" title="Mehnat daftarchasi Malumotlarni kiritish" >Mehnat Daftarchasi</a></li>
+                </ul>
 
-            <div class="col-md-6">
-                <div class="row">
-                    <form class="" action="#" method="post">
-                        <div>
-                            <input type="text" name="Ismi" placeholder="Ismi...">
-                        </div>
+                <div class="tab-content">
+                    @*Asosiy*@
+                    <div class="tab-pane fade active in" id="umumiy" >
                         <br>
-                        <div>
-                            <input type="email" name="Familyasi" placeholder="Familyasi...">
-                        </div>
-                        <br>
-                        <div>
-                            <input type="text" name="Otasining ismi" placeholder="Otasining ismi...">
-                        </div>
-                        <br>
-                        <div class="text-center">
-                            <label for="date"><b>Tugilgan sana: </b> </label>
-                            <input type="date" id="date" name="Tugilgan sana">
-                        </div>
-                        <br>
-
-                        <div class="col-md-6">
-                            <label for="EduType_ID">
-                                <select class="form-control" data-val="true" data-val-number="The field EduType_ID must be a number." id="EduType_ID" name="EduType_ID">
-                                    <option>---Bolim (Kafedra)---</option>
-                                    <option>Kompyuter injineringi</option>
-                                    <option>Telekomunikatsiya </option>
-                                    <option>Kasb Ta'lim</option>
-                                    <option>Ma'muriyat</option>
-                                </select>
-                            </label>
-                        </div>
-
-
-                        <div class="form-group">
-
+                        <div class="row">
+                            <div class="col-md-3"></div>
                             <div class="col-md-6">
-                                <label for="Position_ID">
-                                    <select class="form-control" data-val="true" data-val-number="The field Position_ID must be a number." id="Position_ID" name="Position_ID">
-                                        <option>Bo'sh</option>
-                                        <option>Loyiha rahbari</option>
-                                        <option>Dasturchi</option>
-                                        <option>Bosh hisobchi</option>
-                                        <option>Ilmiy xodim</option>
-                                        <option>Ilmiy tadqiqotchi</option>
-                                        <option>Bo'lim boshlig'i</option>
-                                        <option>O'quv ishlari bo'yicha prorektor (filial direktori o'rinbosari)</option>
-                                        <option>Ilmiy ishlar bo'yicha prorektor (filial direktori o'rinbosari)</option>
-                                        <option>Moliyaviy-iqtisodiy ishlari bo'yicha prorektor (filial direktori o'rinbosari)</option>
-                                        <option>Xalqaro aloqalar bo'yicha prorektor (filial direktori o'rinbosari)</option>
-                                        <option>Rektor yordamchisi</option>
-                                        <option>Bosh muhandis</option>
-                                        <option>Bosh mexanik</option>
-                                        <option>Bosh energetik</option>
-                                        <option>Kotiba - ish yurituvchi</option>
-                                        <option>Huquqshunos maslahatchi</option>
-                                        <option>1-toifali huquqshunos maslahatchi</option>
-                                        <option>Uslubchi</option>
-                                        <option>Inspektor</option>
-                                        <option>Iqtidorli yoshlar bilan ishlash bo'yicha uslubchi</option>
-                                        <option>Metodik ishlar bo'yicha boshliq o'rinbosari</option>
-                                        <option>Sirtqi ta'lim uslubchisi</option>
-                                        <option>O'quv ishlari bo'yicha inspektor</option>
-                                        <option>Statist</option>
-                                        <option>Yosh mutaxasislar bilan ishlash bo'yicha bosh inspektor</option>
-                                        <option>Katta inspektor</option>
-                                        <option>Ilmiy tadqiqot ishlari muhandisi</option>
-                                        <option>Markaz boshlig'i - Axborot va texnik ta'minot bo'limi boshlig'i</option>
-                                        <option>Muhandis-dasturchi (toifasiz)</option>
-                                        <option>Muhandis-elektronchi (toifasiz)</option>
-                                        <option>Texnik - elektronchi</option>
-                                        <option>Kompyuter zali mudiri</option>
-                                        <option>Tizimli dasturlovchi</option>
-                                        <option>Tarmoq va ma'lumotlar bazasi administratori</option>
-                                        <option>Texnik</option>
-                                        <option>Bo'lim (sektor) mudiri</option>
-                                        <option>Direktor</option>
-                                        <option>Direktor o'rinbosari</option>
-                                        <option>Bo'lim (sektor) boshlig'i</option>
-                                        <option>Bosh kutubxonachi</option>
-                                        <option>Bosh bibliograf</option>
-                                        <option>Etakchi kutubxonachi</option>
-                                        <option>Etakchi bibliograf</option>
-                                        <option>Kutubxonachi(kategoriyasiz)</option>
-                                        <option>Bibliograf (kategoriyasiz)</option>
-                                        <option>Muqovalovchi</option>
-                                        <option>Nusxa ko'chirish-ko'paytirish uskunasi operatori</option>
-                                        <option>Restavrator</option>
-                                        <option>Muharrir</option>
-                                        <option>Musahhih</option>
-                                        <option>Texnik redaktor</option>
-                                        <option>Dekan o'rinbosari</option>
-                                        <option>O'quv ishlari bo'yicha dispetcher</option>
-                                        <option>1-toifali iqtisodchi</option>
-                                        <option>2-toifali iqtisodchi</option>
-                                        <option>Bosh buxgalter</option>
-                                        <option>Bosh buxgalter o'rinbosari</option>
-                                        <option>Bosh buxgalter o'rinbosari - auditor</option>
-                                        <option>To'lov-kontrakt asosida o'qitishdan tushgan mablag'larini hisobga olish bo'yicha buxgalter (toifasiz, 1,2-toifa)</option>
-                                        <option>Buxgalter (kategoriyasiz)</option>
-                                        <option>Katta g'aznachi</option>
-                                        <option>G'aznachi</option>
-                                        <option>Bosh ta'minotchi</option>
-                                        <option>Ombor mudiri</option>
-                                        <option>Omborchi</option>
-                                        <option>Radioaktiv moddalar ombori mudiri</option>
-                                        <option>Bino komendanti</option>
-                                        <option>Yordamchi ishchi</option>
-                                        <option>Xo'jalik mudiri</option>
-                                        <option>Dispetcher xizmati operatori</option>
-                                        <option>Talabalar turar joyi mudiri</option>
-                                        <option>slesar - santexnik</option>
-                                        <option>Elektromontyor</option>
-                                        <option>duradgor</option>
-                                        <option>Ventilyatsiya va konditsionerlashtirish tizimlarini ta'mirlash va xizmat ko'rsatish bo'yicha chilangar</option>
-                                        <option>Pol pardozlovchi</option>
-                                        <option>Xizmat binolari va Talabalar turar joyini tozalovchi farrosh</option>
-                                        <option>Gaz payvandlovchi</option>
-                                        <option>Garderobchi</option>
-                                        <option>Liftchi</option>
-                                        <option>Qorovul</option>
-                                        <option>Bog'bon</option>
-                                        <option>Xovli supuruvchi</option>
-                                        <option>Yuklovchi</option>
-                                        <option>Xo'jalik bekasi</option>
-                                        <option>Pasportist</option>
-                                        <option>Talabalar turar joyi direktori</option>
-                                        <option>Talabalar turar joyi direktori o'rinbosari</option>
-                                        <option>Talabalar shaharchasi direktori o'rinbosari</option>
-                                        <option>Dispetcher-garaj boshlig'i</option>
-                                        <option>Mexanik</option>
-                                        <option>Xaydovchi</option>
-                                        <option>Stantsiya boshlig'i (ATS)</option>
-                                        <option>Aloqa muhandisi (toifasiz)</option>
-                                        <option>Aloqa bo'yicha texnik</option>
-                                        <option>Aloqachi (aloqa elektromontyori)</option>
-                                        <option>Kabinet mudiri</option>
-                                        <option>Muhandis</option>
-                                        <option>Ishlab chiqarish ta'limi ustasi</option>
-                                        <option>Kontsertmeyster (etakchi kontsertmeyster)</option>
-                                        <option>Ma'naviy-ma'rifiy ishlar bo'yicha prorektor (filial direktori o'rinbosari)</option>
-                                        <option>Stajyor - tadqiqotchi izlanuvchi</option>
-                                        <option>EHM operatori</option>
-                                        <option>Ilmiy kengash kotibi</option>
-                                        <option>Devonxona mudiri</option>
-                                        <option>Ish yurituvchi</option>
-                                        <option>Arxiv mudiri</option>
-                                        <option>Arxivarius</option>
-                                        <option>Kuryer</option>
-                                        <option>O'quv jihozlari bo'yicha 1-toifali muhandis</option>
-                                        <option>Mehnat muhofazasi bo'yicha 1-toifali muhandis</option>
-                                        <option>Mehnat muhofazasi bo'yicha muhandis</option>
-                                        <option>Fuqaro mudofaasi va favqulodda vaziyatlar bo'yicha muhandis</option>
-                                        <option>Yong'in xavfsizligi bo'yicha instruktor</option>
-                                        <option>Katta tovarshunos</option>
-                                        <option>Muhandis-dasturchi (1 - toifa)</option>
-                                        <option>Muhandis-dasturchi (2 - toifa)</option>
-                                        <option>Muhandis-elektronchi (1 - toifa)</option>
-                                        <option>Muhandis-elektronchi (2 - toifa)</option>
-                                        <option>Kutubxonachi (1 - toifa)</option>
-                                        <option>Kutubxonachi (2 - toifa)</option>
-                                        <option>Bibliograf (1 - toifa)</option>
-                                        <option>Bibliograf( 2- toifa)</option>
-                                        <option>Buxgalter (1 - toifa)</option>
-                                        <option>Buxgalter (2 - toifa)</option>
-                                        <option>Aloqa muhandisi (1 - toifa)</option>
-                                        <option>Aloqa muhandisi (2 - toifa)</option>
-                                        <option>Laborant</option>
-                                        <option>Katta laborant</option>
-                                        <option>Etakchi Muhandis-dasturchi</option>
-                                        <option>Farosh</option>
-                                        <option>Kir yuvuvchi</option>
-                                        <option>Hovli supurovchi</option>
-                                        <option>Korovul</option>
-                                        <option>Bosh mutaxassis</option>
-                                        <option>Akademik lisey va kasb-hunar kollejlar bo'yicha prorektor (filial direktori o'rinbosari)</option>
-                                    </select>
-                                </label>
+                                <div class="row">
+                                    <form class="" action="#" method="post">
+                                        <div>
+                                            <input class="form-control form-group" type="text" name="Ismi" placeholder="Ismi...">
+                                        </div>
+                                        <br>
+                                        <div>
+                                            <input class="form-control form-group" type="email" name="Familyasi" placeholder="Familyasi...">
+                                        </div>
+                                        <br>
+                                        <div>
+                                            <input class="form-control form-group" type="text" name="Otasining ismi" placeholder="Otasining ismi...">
+                                        </div>
+                                        <br>
+                                        <div class="text-center">
+                                            <label for="date"><b>Tugilgan sana: </b> </label>
+                                            <input class="" type="date" id="date" name="Tugilgan sana">
+                                        </div>
+                                        <br>
 
+                                        <div class="col-md-6">
+                                            <select class="form-control form-group">
+                                                <option selected="selected" >
+                                                    Bolim (Kafedra)</option>
+                                                <option value="1">Kompyuter injineringi</option>
+                                                <option value="2">Telekomunikatsiya</option>
+                                                <option value="3">Kasb Ta'lim</option></select>
+                                        </div>
+                                        <div class="form-group">
+
+                                            <div class="col-md-6">
+                                                <select class="form-control">
+                                                    <option selected="selected">
+                                                        Lavozimi</option>
+                                                    <option value="4">Rektor (Filial direktori)</option>
+                                                    <option value="5">
+                                                        O&#39;quv va ilmiy ishlar bo&#39;yicha prorektor (filial direktori o&#39;rinbosari)</option>
+                                                    <option value="6">Ixtisoslashtirilgan Kengash ilmiy kotibi</option>
+                                                    <option value="7">Fakultet dekani</option>
+                                                    <option value="8">Kafedra mudiri</option>
+                                                    <option value="9">Kafedra professori</option>
+                                                    <option value="10">Kafedra dotsenti</option>
+                                                    <option value="11">Katta o&#39;qituvchi</option>
+                                                    <option value="11">O'qituvchi</option>
+                                                    <option value="12">O'qituvchi assistent</option>
+                                                    <option value="13">Dekan O'rinbosari</option>
+                                                </select>
+                                                <br>
+                                            </div>
+                                            <select class="form-control">
+                                                <option >Ma'lumoti</option>
+                                                <option value="1">Boshlang'ich</option>
+                                                <option value="2">Oliy</option>
+                                                <option value="3">O'rta maxsus</option>
+                                                <option value="4">O'rta</option>
+                                                <option value="5">To'liqsiz o'rta</option>
+                                            </select>
+                                            <br>
+                                            <select class="form-control">
+                                                <option selected="selected" >Millati</option>
+                                                <option value="1">O'zbek</option>
+                                                <option value="2">Rus</option>
+                                                <option value="3">Tojik</option>
+                                                <option value="4">Qozoq</option>
+                                                <option value="5">Turkman</option>
+                                                <option value="24">Eroniy</option>
+                                                <option value="25">Qoraqalpoq</option>
+                                                <option value="26">Ukrain</option>
+                                                <option value="27">Tatar</option>
+                                                <option value="28">Qirg'iz</option>
+                                                <option value="29">Arman</option>
+                                                <option value="30">Yahudiy</option>
+                                                <option value="31">Uyg'ur</option>
+                                                <option value="32">Koreys</option>
+                                                <option value="33">Boshqa millat</option>
+                                                <option value="34">Afg'on</option>
+                                                <option value="35">Ingliz</option>
+                                                <option value="36">Ispan</option>
+                                                <option value="37">Hind</option>
+                                                <option value="39">Ozarbayjon</option>
+                                                <option value="40">Nemis</option>
+                                                <option value="41">Belorus</option>
+                                                <option value="42">Qrim-Tatar</option>
+                                                <option value="43">Masxeti turk</option>
+                                                <option value="44">Grek</option>
+                                            </select>
+                                            <br>
+                                            <select class="form-control">
+                                                <option selected="selected" value="1">Jinsi</option>
+                                                <option value="1">Erkak</option>
+                                                <option value="2">Ayol</option>
+                                            </select>
+                                            <br>
+                                            <select class="form-control">
+                                                <option selected="selected">Oilaviy ahvoli</option>
+                                                <option value="1">Turmushga chiqmagan</option>
+                                                <option value="2">Beva</option>
+                                                <option value="3">Ajrashgan</option>
+                                                <option value="4">Uylangan</option>
+                                                <option value="5">Turmushga chiqqan</option>
+                                                <option value="6">Uylanmagan</option>
+                                            </select>
+                                            <br>
+                                            <div class="text-center">
+                                                <button type="button" class="btn btn-success " >Saqlash</button>
+                                                <button type="button" class="btn btn-danger " >O'chirish</button>
+                                            </div>
+                                        </div> <!-- .row -->
+                                        <div class="col-md-3"></div>
+                                    </form>
+                                </div> <!-- .row -->
                             </div>
 
-                        </div> <!-- .row -->
-                        <div class="col-md-3"></div>
-                    </form>
-                </div> <!-- .row -->
+                        </div>
+                    </div>
+                    @*Manzil*@
+                    <div class="tab-pane fade " id="manzil">
+                        <br>
+                        <div class="row">
+                            <div class="col-md-3"></div>
+                            <div class="col-md-6">
+                                <select class="form-control"><option value="">---Tanlang---</option>
+                                    <option selected="selected" value="1">O'zbekiston</option>
+                                    <option value="2">Avstraliya</option>
+                                    <option value="3">Avstriya</option>
+                                    <option value="4">Ozarbayjon</option>
+                                    <option value="5">Albaniya</option>
+                                    <option value="6">Jazoir</option>
+                                    <option value="7">Amerika-Samoa</option>
+                                    <option value="8">Angilya</option>
+                                    <option value="9">Angola</option>
+                                    <option value="10">Andorra</option>
+                                    <option value="11">Antigua va Barbuda</option>
+                                    <option value="12">Antilles</option>
+                                    <option value="13">Argentina</option>
+                                    <option value="14">Armeniya</option>
+                                    <option value="16">Afg'oniston</option>
+                                    <option value="17">Bagama orollari</option>
+                                    <option value="18">Bangladesh</option>
+                                    <option value="19">Barbados</option>
+                                    <option value="20">Baxrayn</option>
+                                    <option value="21">Belarussiya</option>
+                                    <option value="22">Beliz</option>
+                                    <option value="23">Belgiya</option>
+                                    <option value="24">Benin</option>
+                                    <option value="25">Bermud oroli</option>
+                                    <option value="26">Boliviya</option>
+                                    <option value="27">Bosniya va Gertsegovinya</option>
+                                    <option value="28">Botsvana</option>
+                                    <option value="29">Brazilya</option>
+                                    <option value="30">Bruney</option>
+                                    <option value="31">Burkina-Faso</option>
+                                    <option value="32">Burundi</option>
+                                    <option value="33">Butan</option>
+                                    <option value="34">Vanuatu</option>
+                                    <option value="35">Buyuk Britaniya</option>
+                                    <option value="36">Vengriya</option>
+                                    <option value="37">Venesuela</option>
+                                    <option value="38">Virgin oroli</option>
+                                    <option value="40">Sharqiy Timor</option>
+                                    <option value="41">Vetnam</option>
+                                    <option value="42">Gabon</option>
+                                    <option value="43">Gaiti</option>
+                                    <option value="44">Gayana</option>
+                                    <option value="45">Gambiya</option>
+                                    <option value="46">Gana</option>
+                                    <option value="47">Gvadelupa</option>
+                                    <option value="48">Gvatemala</option>
+                                    <option value="50">Gvineya</option>
+                                    <option value="51">Gvineya-Bisau</option>
+                                    <option value="52">Germaniya</option>
+                                    <option value="53">Gibraltar</option>
+                                    <option value="54">Gonduras</option>
+                                    <option value="55">Grenada</option>
+                                    <option value="56">Grenlandiya</option>
+                                    <option value="57">Gretsiya</option>
+                                    <option value="58">Gruziya</option>
+                                    <option value="60">Daniya</option>
+                                    <option value="61">Kongo</option>
+                                    <option value="62">Jibuti</option>
+                                    <option value="64">Domin Respublikasi</option>
+                                    <option value="65">Misr</option>
+                                    <option value="66">Zambiya</option>
+                                    <option value="67">G'arbiy Sahroi Kabir</option>
+                                    <option value="68">Zimbabve</option>
+                                    <option value="69">Isroil</option>
+                                    <option value="70">Indoneziya</option>
+                                    <option value="71">Iordaniya</option>
+                                    <option value="72">Iroq</option>
+                                    <option value="73">Eron</option>
+                                    <option value="74">Irlandiya</option>
+                                    <option value="75">Islandiya</option>
+                                    <option value="76">Ispaniya</option>
+                                    <option value="77">Italiya</option>
+                                    <option value="78">Yaman</option>
+                                    <option value="79">Kabo-Verde</option>
+                                    <option value="80">Qozog'iston</option>
+                                    <option value="82">Kambodja</option>
+                                    <option value="83">Kamerun</option>
+                                    <option value="84">Kanada</option>
+                                    <option value="85">Qatar</option>
+                                    <option value="86">Kenya</option>
+                                    <option value="87">Kipr</option>
+                                    <option value="88">Kiribati</option>
+                                    <option value="89">Xitoy</option>
+                                    <option value="91">Kolumbiya</option>
+                                    <option value="92">Komoros orollari</option>
+                                    <option value="93">Kongo</option>
+                                    <option value="94">Kosta-Rika</option>
+                                    <option value="95">Kot-d'Ivuar</option>
+                                    <option value="96">Kuba</option>
+                                    <option value="97">Quvayt</option>
+                                    <option value="98">Kuk orollari</option>
+                                    <option value="99">Qirg'iziston</option>
+                                    <option value="100">Laos</option>
+                                    <option value="101">Latviya</option>
+                                    <option value="102">Lesoto</option>
+                                    <option value="103">Liberiya</option>
+                                    <option value="104">Livan</option>
+                                    <option value="105">Liviya</option>
+                                    <option value="106">Litva</option>
+                                    <option value="107">Lixtenshteyn</option>
+                                    <option value="108">Lyuksemburg</option>
+                                    <option value="109">Mavriya</option>
+                                    <option value="110">Mavritaniya</option>
+                                    <option value="111">Madagaskar</option>
+                                    <option value="113">Makedoniya</option>
+                                    <option value="114">Malavi</option>
+                                    <option value="115">Malaziya</option>
+                                    <option value="116">Mali</option>
+                                    <option value="117">Maldava</option>
+                                    <option value="118">Malta</option>
+                                    <option value="119">Marokko</option>
+                                    <option value="120">Martinika</option>
+                                    <option value="122">Meksika</option>
+                                    <option value="123">Mozambik</option>
+                                    <option value="124">Moldova</option>
+                                    <option value="125">Monako</option>
+                                    <option value="126">Mo'g'iliston</option>
+                                    <option value="128">Myanma</option>
+                                    <option value="129">Namibiya</option>
+                                    <option value="130">Nauru</option>
+                                    <option value="131">Nepal</option>
+                                    <option value="132">Niger</option>
+                                    <option value="133">Nigeriya</option>
+                                    <option value="134">Niderlandiya</option>
+                                    <option value="135">Nikaragua</option>
+                                    <option value="137">Yangi Zelandiya</option>
+                                    <option value="138">Yangi Kaledoniya</option>
+                                    <option value="139">Norvegiya</option>
+                                    <option value="140">Norfolk</option>
+                                    <option value="141">Birlashgan Arab Amirligi</option>
+                                    <option value="142">Oman</option>
+                                    <option value="143">Pokiston</option>
+                                    <option value="145">Panama</option>
+                                    <option value="146">Papua-Yangi Gvineya</option>
+                                    <option value="147">Paragvay</option>
+                                    <option value="148">Peru</option>
+                                    <option value="149">Pitkern oroli</option>
+                                    <option value="150">Polsha</option>
+                                    <option value="151">Portugaliya</option>
+                                    <option value="152">Puerto-Riko</option>
+                                    <option value="153">Reyunion</option>
+                                    <option value="155">Rossiya</option>
+                                    <option value="156">Ruanda</option>
+                                    <option value="157">Ruminya</option>
+                                    <option value="158">San-Marino</option>
+                                    <option value="159">San-Tome va Prinsipi</option>
+                                    <option value="160">Saudiya Arabistoni</option>
+                                    <option value="161">Svazilend</option>
+                                    <option value="162">Muqaddas Yelena oroli</option>
+                                    <option value="163">Shimoliy Koreya</option>
+                                    <option value="165">Seyshal oroli</option>
+                                    <option value="166">Senegal</option>
+                                    <option value="167">Sent-Pyer va Mikelon</option>
+                                    <option value="168">Sent-Vinsent va Grenadina</option>
+                                    <option value="169">Sent-Kits va Nevis</option>
+                                    <option value="170">Sent-Lusiya</option>
+                                    <option value="171">Singapur</option>
+                                    <option value="172">Suriya</option>
+                                    <option value="173">Slovakiya</option>
+                                    <option value="174">Sloveniya</option>
+                                    <option value="175">Amerika Qo'shma Shtatlari</option>
+                                    <option value="176">Solomon orollari</option>
+                                    <option value="177">Somali</option>
+                                    <option value="178">Sudan</option>
+                                    <option value="179">Surinam</option>
+                                    <option value="180">Syerra-Leone</option>
+                                    <option value="181">Tojikiston</option>
+                                    <option value="182">Tailand</option>
+                                    <option value="183">Tanzaniya</option>
+                                    <option value="185">Togo</option>
+                                    <option value="186">Tonga</option>
+                                    <option value="187">Trinidad va Tobago</option>
+                                    <option value="188">Tuvalu</option>
+                                    <option value="189">Tunis</option>
+                                    <option value="190">Turkmaniston</option>
+                                    <option value="191">Turkiya</option>
+                                    <option value="192">Uganda</option>
+                                    <option value="193">Ukraina</option>
+                                    <option value="195">Urugvay</option>
+                                    <option value="197">Fiji</option>
+                                    <option value="198">Filippin</option>
+                                    <option value="199">Finlandiya</option>
+                                    <option value="201">Fransiya</option>
+                                    <option value="202">Fransiya Polineziyasi</option>
+                                    <option value="203">Xorvatiya</option>
+                                    <option value="205">Chad</option>
+                                    <option value="206">Chexiya</option>
+                                    <option value="207">Chili</option>
+                                    <option value="208">Shvetsiya</option>
+                                    <option value="209">Shveytsariya</option>
+                                    <option value="210">Shri-Lanka</option>
+                                    <option value="211">Ekvador</option>
+                                    <option value="212">Ekvatorial Gvineya</option>
+                                    <option value="213">Eritreya</option>
+                                    <option value="214">Estoniya</option>
+                                    <option value="215">Efiopiya</option>
+                                    <option value="216">Janubiy Koreya</option>
+                                    <option value="217">Janubiy Afrika Respublikasi</option>
+                                    <option value="218">Yamayka</option>
+                                    <option value="219">Yaponiya</option>
+                                    <option value="1228">Абхазия</option>
+                                    <option value="1229">Арулько</option>
+                                    <option value="1230">Болгария</option>
+                                    <option value="1231">Валлис и Футуна о-ва</option>
+                                    <option value="1232">Гернси о-в</option>
+                                    <option value="1233">Гонконг</option>
+                                    <option value="1234">Джерси о-в</option>
+                                    <option value="1235">Индия</option>
+                                    <option value="1236">Мэн о-в</option>
+                                    <option value="1237">Сальвадор</option>
+                                    <option value="1238">Сербия</option>
+                                    <option value="1239">Тайвань</option>
+                                    <option value="1240">Токелау о-ва</option>
+                                    <option value="1241">Туркс и Кейкос</option>
+                                    <option value="1242">Фарерские о-ва</option>
+                                    <option value="1243">Французская Гвинея</option>
+                                    <option value="1244">Черногория</option>
+                                    <option value="1245">Южная Осетия</option>
+                                </select><br>
+                                <select class="form-control">
+                                    <option selected="selected">Viloyat</option>
+                                    <option value="1">Qoraqalpog'iston Respublikasi</option>
+                                    <option value="2">Andijon viloyati</option>
+                                    <option value="3">Namangan viloyati</option>
+                                    <option value="4">Farg'ona viloyati</option>
+                                    <option value="5">Buxoro viloyati</option>
+                                    <option value="6">Xorazm viloyati</option>
+                                    <option value="7">Surxondaryo viloyati</option>
+                                    <option value="8">Qashqadaryo viloyati</option>
+                                    <option value="9">Jizzax viloyati</option>
+                                    <option value="10">Navoiy viloyati</option>
+                                    <option value="11">Samarqand viloyati</option>
+                                    <option value="12">Sirdaryo viloyati</option>
+                                    <option value="13">Toshkent viloyati</option>
+                                    <option value="14">Toshkent shahri</option>
+                                </select><br>
+                                <select class="form-control">
+                                    <option selected="selected">Tuman (Shahar)</option>
+                                    <option value="69">Urganch tumani</option>
+                                    <option value="70">Xiva tumani</option>
+                                    <option value="71">Xazorasp tumani</option>
+                                    <option value="72">Gurlan tumani</option>
+                                    <option value="73">Xonqa tumani</option>
+                                    <option value="74">Shovot tumani</option>
+                                    <option value="75">Yangibozor tumani</option>
+                                    <option  value="76">Qo'shko'pir tumani</option>
+                                    <option value="77">Bog'ot tumani</option>
+                                    <option value="78">Yangiariq tumani</option>
+                                    <option value="180">Urganch shahri</option>
+                                </select><br>
+                                <input class="form-control" placeholder="Manzil"><br>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label class="control-label"><b>Telefon raqami:</b></label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input class="form-control" id="Address_Phone" name="Address_Phone" type="text"  value="+998 "><br>
+                                    </div>
+
+                                </div>
+                                <input class="form-control" id="Address_Fax" placeholder="Faks" name="Address_Fax" type="text" ><br>
+                                <input class="form-control" id="Address_Email" name="Address_Email"  placeholder="Email Address" type="email" ><br>
+                                <br>
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-success" >Saqlash</button>
+                                    <button type="button" class="btn btn-danger " >O'chirish</button>
+                                </div>
+                            </div>
+                            <div class="col-md-3"></div>
+
+                        </div>
+                    </div>
+                    @*Pasport*@
+                    <div class="tab-pane fade" id="pasport">
+                        <div class="row">
+                            <div class="col-md-3"></div>
+                            <div class="col-md-6">
+                                <br>
+                                <input class="form-control form-group" type="text" name="psSR"  maxlength="2" placeholder="Pasport Seriasi..."><br>
+                                <input class="form-control form-group" type="number" name="psNO" placeholder="Pasport Raqami..."><br>
+                                <input class="form-control form-group" type="text" name="kmt" placeholder="Yug'ilgan davlati..."><br>
+                                <input class="form-control form-group" type="text" name="qch" placeholder="Tug'ilgan viloyati..."><br>
+                                <input class="form-control form-group" type="text" name="ammu" placeholder="IIB(to'liq kiritilsin...)"><br>
+                                <div class="col-md-6">
+
+                                    <label for="date"><b>Berilgan sanasi</b> </label>
+                                    <input  class="form-control form-group" type="date" name="a1" >
+                                </div>
+
+                                <div class="col-md-6">
+
+                                    <label for="date"><b>Amal qilish mudati </b> </label>
+                                    <input  class="form-control form-group" type="date" name="a2" >
+
+                                </div>
+                                <input class="form-control form-group" type="text" name="a3" placeholder="Fuqoroligi...">
+                                <br>
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-success" >Saqlash</button>
+                                    <button type="button" class="btn btn-danger " >O'chirish</button>
+                                </div>
+
+
+
+
+                            </div>
+                            <div class="col-md-3"></div>
+                        </div>
+                    </div>
+                    @*mehnat daftarchasi*@
+                    <div class="tab-pane fade " id="mehnatDaftar">
+                        <div class="row">
+                            <div class="col-md-3"></div>
+                            <div class="col-md-6">
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label class="control-label"><b>Ishga kirgan yili:</b></label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input class="form-control"  name="Ishga_kirgan_yili" type="date" ><br>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label class="control-label"><b>Ishdan bo'shagan yili:</b></label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input class="form-control"  name="Ishdan_boshagan_yili" type="date" ><br>
+                                    </div>
+
+                                </div>
+                                <input class="form-control" name="tashkilot" type="text" placeholder="Tashkilot..."><br>
+                                <input class="form-control" name="manzil" type="text" placeholder="Manzil..."><br>
+                                <input class="form-control" name="lavozim" type="text" placeholder="Lavozim..."><br>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button type="button" class="btn btn-success" >Saqlash</button>
+                            <button type="button" class="btn btn-danger " >O'chirish</button>
+                        </div>
+
+                    </div>
+
+
+                    @*Malaka oshirish*@
+
+                </div>
+
+
+
             </div>
-        </div> <!-- .container -->
-    </div>
+        </div>
+
+
+
+    </div> <!-- .container -->
+
 
 
 }

@@ -19,7 +19,7 @@ POST        /addWorkers                  @controllers.Workers.addWorkers
 GET         /addWorkers                  @controllers.Workers.showAddForm
 GET         /workersList                 @controllers.Workers.workersList
 
-GET         /manzil                      controllers.Application.manzil
+
 
 
 
