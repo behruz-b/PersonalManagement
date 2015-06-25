@@ -72,14 +72,24 @@
     clear: both;
     font-weight: 400;
     line-height: 1.42857143;
-    color: #47545f;
     white-space: nowrap;
     font-family: 'Open Sans', Arial, sans-serif;
     font-style: italic;
 }
-.dropdown-menu > li > a:hover {
-    background-color: #f85240;
+.dropdown-menu > li > a {
+    color: #d6d6d2;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-style: italic;
 }
-.dropdown-menu > li > a:focus {
-    background-color: #222af8;
+.dropdown-menu > li > a:hover {
+    background-color: transparent;
+
+}
+.dropdown-menu {
+    background-color: #38424b;  }
+
+.navbar-collapse .navbar-nav > .open > a,
+.navbar-collapse .navbar-nav > .open > a:hover,
+.navbar-collapse .navbar-nav > .open > a:focus {
+    background-color: transparent;
 }
