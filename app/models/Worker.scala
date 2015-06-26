@@ -37,3 +37,21 @@ class PersonalDataTableW(tag: Tag) extends  Table[PersonalDataW](tag, "Workers")
 }
 case class FamilyMembersW()
 class FamilyMembersTableW()
+
+object forinc{
+  var t1=false
+  def y1: Unit ={
+    t1=true
+    t1
+  }
+  var t2=false
+  def y2: Unit ={
+    t2=true
+    t2
+  }
+  var t3=false
+  def y3: Unit ={
+    t3=true
+    t3
+  }
+}
