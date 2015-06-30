@@ -1,11 +1,20 @@
 package controllers
+
+/**
+ * Created by Doston on 19.06.2015.
+ */
+
+import play.api.mvc._
+import play.api.db.slick._
+import play.api.db.slick.Config.driver.simple._
 import models._
 import play.api.Logger
-import play.api.db.slick.Config.driver.simple._
-import play.api.db.slick._
-import play.api.mvc._
+
 import scala.slick.lifted.TableQuery
+
+
 class Workers extends Controller{
+
   val personalDataW = TableQuery[PersonalDataTableW]
 
   def workersList = DBAction { implicit rs =>
@@ -13,13 +22,13 @@ class Workers extends Controller{
     Ok(views.html.workersList(personalDataW.list))
   }
 
-  def showAddForm = DBAction { implicit rs =>
+  def showAddForm = Action {
     Ok(views.html.addWorker())
   }
 
   def addWorkers = DBAction { implicit request =>
     val formParams = request.body.asFormUrlEncoded
-    val First_name = formParams.get("firstName")(0)
+    val First_name = formParams.get("First_name")(0)
     val Last_name = formParams.get("Last_name")(0)
     val Second_name = formParams.get("Second_name")(0)
     val Department = formParams.get("Department")(0)
@@ -56,10 +65,11 @@ class Workers extends Controller{
 //    val Mother_second_name = formParams.get("Mother_second_name")(0)
 //    val Mother_nationality = formParams.get("Mother_nationality")(0)
 
-    val workerId = (personalDataW returning personalDataW.map(_.id)) += PersonalDataW(None, First_name,Last_name, Second_name, Department, Commission, Birthday, Education, Nationality, Sex, Marital_status, Country, Region, District, Address, Tel_number, Fax, Mail_address, Passport_series, Passport_number, Country_of_birth, Who_is_given_by)
+    val workerId = (personalDataW returning personalDataW.map(_.id)) += PersonalDataW(None, First_name, Last_name, Second_name, Department, Commission, Birthday, Education, Nationality, Sex, Marital_status, Country, Region, District, Address, Tel_number, Fax, Mail_address, Passport_series, Passport_number.toInt, Country_of_birth, Who_is_given_by)
+//      , Issue_date, Term_of_validity, Citizenship, Recruitment_year, Resignation_year, Organization, Relatives, Father_name, Father_surname, Father_second_name, Father_nationality, Mother_name, Mother_surname, Mother_second_name, Mother_nationality, Part_time_job.toDouble, Which_language_know, What_extend_know)
     Redirect(routes.Workers.workersList())
   }
-//  Last_name, Second_name, Department, Commission, Birthday, Education, Nationality, Sex, Marital_status, Country, Region, District, Address, Tel_number, Fax, Mail_address, Passport_series, Passport_number, Country_of_birth, Who_is_given_by, Issue_date, Term_of_validity, Citizenship, Recruitment_year, Resignation_year, Organization, Relatives, Father_name, Father_surname, Father_second_name, Father_nationality, Mother_name, Mother_surname, Mother_second_name, Mother_nationality
+
   def remove(id: Int) = DBAction { implicit request =>
     personalDataW.filter(_.id === id).delete
     Redirect(routes.Workers.workersList())
