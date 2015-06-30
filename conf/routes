@@ -8,7 +8,8 @@ GET         /homePage                    controllers.Application.homePage
 
 POST        /addTeachers                 @controllers.Teachers.addTeachers
 GET         /addTeachers                 @controllers.Teachers.addTeachers
-GET         /studentsTeachers            @controllers.Teachers.teachersList
+GET         /teachersList                @controllers.Teachers.teachersList
+GET         /teacher/:id/remove          @controllers.Teachers.remove(id: Int)
 
 POST        /addStudents                 @controllers.Students.addStudents
 GET         /addStudents                 @controllers.Students.showAddForm

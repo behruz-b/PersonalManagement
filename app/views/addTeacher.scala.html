@@ -1,7 +1,10 @@
+@()
+
 @main("O'qituvchilarni qo'shish") {
+
     @navbar("addteachers")
 
-    <div class="container" xmlns="http://www.w3.org/1999/html">
+    <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
                 <h1 class="text-primary"><b>Oqituvchining shaxsiy ma'lumotlarini kiritish</b></h1>
@@ -11,60 +14,72 @@
             <div class="col-md-3"></div>
             <div class="col-md-6">
                 <div class="row">
-                    <form class="" action="#" method="post">
-                        <div>
-                            <input type="text" name="Ismi" placeholder="Ismi..." >
+                    <form class="@routes.Teachers.addTeachers()" method="post">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Ismi..." required="" class="form-control">
                         </div>
                         <br>
-                        <div>
-                            <input type="text" name="Familyasi" placeholder="Familyasi...">
+                        <div class="form-group">
+                            <input type="text" name="surname" placeholder="Familyasi..." required="" class="form-control">
                         </div>
                         <br>
-                        <div>
-                            <input type="text" name="Otasining ismi" placeholder="Otasining ismi...">
+                        <div class="form-group">
+                            <input type="text" name="secondName" placeholder="Otasining ismi..." required="" class="form-control">
                         </div>
                         <br>
-                        <div class="text-center">
+                        <div class="text-center form-group">
                             <label for="date"><b>Tug'ilgan sana: </b> </label>
-                            <input type="date" id="date" name="Tugilgan sana" >
+                            <input type="date" id="date" name="dataOfBirth" required="" class="form-control">
                         </div>
                         <br>
-                        <div>
-                            <input type="text" name="passportSeries" placeholder="Pasport seriyasi..." >
+                        <div class="form-group">
+                            <input type="text" name="passportSeries" placeholder="Pasport seriyasi..." required="" class="form-control">
                         </div>
                         <br/>
-
-                        <div class=" col-md-6">
-                            <select class="form-control" data-val="true" data-val-number="The field EduType_ID must be a number." id="EduType_ID" name="EduType_ID"><option >
-                                ---Bolim (Kafedra)---</option>
-                                <option value="1">Kompyuter injineringi</option>
-                                <option value="2">Telekomunikatsiya injineringi</option>
-                                <option value="3">Kasb Ta'limi</option></select>
-                        </div>
                         <div class="form-group">
-
-                            <div class="col-md-6">
-                                <select class="form-control" data-val="true" data-val-number="The field Position_ID must be a number." id="Position_ID" name="Position_ID"><option >
-                                    Lavozimi</option>
-                                    <option value="4">Rektor (Filial direktori)</option>
-                                    <option value="5">
-                                        O&#39;quv va ilmiy ishlar bo&#39;yicha prorektor (filial direktori o&#39;rinbosari)</option>
-                                    <option value="6">Ixtisoslashtirilgan Kengash ilmiy kotibi</option>
-                                    <option value="7">Fakultet dekani</option>
-                                    <option value="8">Kafedra mudiri</option>
-                                    <option value="9">Kafedra professori</option>
-                                    <option value="10">Kafedra dotsenti</option>
-                                    <option value="11">Katta o&#39;qituvchi</option>
-                                    <option value="12">O&#39;qituvchi assistent</option>
-                                    <option value="13">Dekan o&#39;rinbosari</option>
-                                </select>
-
-                            </div>
-
-
-                        </div> <!-- .row -->
-                        <div class="col-md-3"></div>
+                            <input type="text" name="role" placeholder="Lavozimi..." required="" class="form-control">
+                        </div>
+                        <br/>
+                        <div class="form-group">
+                            <input type="text" name="department" placeholder="Ishlash joyi..." required="" class="form-control">
+                        </div>
+                        <br/>
+                        <div class="form-group">
+                            <input type="text" name="livingPlace" placeholder="Yashash joyi..." required="" class="form-control">
+                        </div>
+                        <br/>
                     </form>
+                    @*<div class=" col-md-6">*@
+                    @*<select class="form-control" data-val="true" data-val-number="The field EduType_ID must be a number." id="EduType_ID" name="EduType_ID"><option >*@
+                    @*---Bolim (Kafedra)---</option>*@
+                    @*<option value="1">Kompyuter injineringi</option>*@
+                    @*<option value="2">Telekomunikatsiya injineringi</option>*@
+                    @*<option value="3">Kasb Ta'limi</option></select>*@
+                    @*</div>*@
+                    @*<div class="form-group">*@
+
+                    @*<div class="col-md-6">*@
+                    @*<select class="form-control" data-val="true" data-val-number="The field Position_ID must be a number." id="Position_ID" name="Position_ID"><option >*@
+                    @*Lavozimi</option>*@
+                    @*<option value="4">Rektor (Filial direktori)</option>*@
+                    @*<option value="5">*@
+                    @*O&#39;quv va ilmiy ishlar bo&#39;yicha prorektor (filial direktori o&#39;rinbosari)</option>*@
+                    @*<option value="6">Ixtisoslashtirilgan Kengash ilmiy kotibi</option>*@
+                    @*<option value="7">Fakultet dekani</option>*@
+                    @*<option value="8">Kafedra mudiri</option>*@
+                    @*<option value="9">Kafedra professori</option>*@
+                    @*<option value="10">Kafedra dotsenti</option>*@
+                    @*<option value="11">Katta o&#39;qituvchi</option>*@
+                    @*<option value="12">O&#39;qituvchi assistent</option>*@
+                    @*<option value="13">Dekan o&#39;rinbosari</option>*@
+                    @*</select>*@
+
+                    @*</div>*@
+
+                    @*<button type="submit" class="btn btn-primary center-block text-center btn-block">Ro'yhatdan o'tish</button>*@
+                    @*</div> <!-- .row -->*@
+                    @*<div class="col-md-3"></div>*@
+                    @*</form>*@
                 </div> <!-- .row -->
             </div>
         </div>

@@ -1,0 +1,44 @@
+@(teachers: List[PersonalDataT])
+
+    @main("O'qituvchilar ro'yhati") {
+
+        @navbar("teachersList")
+        <div class="container">
+            <h1 class="text-center">O'qituvchilar Ro'yhati</h1>
+            <table class="table table-responsive">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <thead>
+                            <tr>
+                                <th>Ismi</th>
+                                <th>Familiyasi</th>
+                                <th>Otasining ismi</th>
+                                <th>Tug'ilgan sanasi</th>
+                                <th>Pasport seriyasi</th>
+                                <th>Lavozimi</th>
+                                <th>Bo'lim (kafedra)</th>
+                                <th>Yashash manzili</th>
+                            </tr>
+                        </thead>
+                    </div>
+                    <div class="col-xs-9">
+                        <tbody>
+                        @for(i <- teachers) {
+                            <tr>
+                                <td>@i.name</td>
+                                <td>@i.surname</td>
+                                <td>@i.secondName</td>
+                                <td>@i.dateOfBirth</td>
+                                <td>@i.passportSeries</td>
+                                <td>@i.role</td>
+                                <td>@i.department</td>
+                                <td>@i.livingPlace</td>
+                            </tr>
+                        }
+                        </tbody>
+                    </div>
+                </div>
+            </table>
+        </div>
+        @footer("O'qituvchilar Ro'yxati")
+    }

@@ -1,11 +1,7 @@
 package models
 
-//import scala.slick.profile.RelationalTableComponent.Table
 import play.api.db.slick.Config.driver.simple._
 
-/**
- * Created by Eldorbek on 19.06.2015.
- */
 case class PersonalDataS(id: Option[Int],
                      ismi: String,
                      familiyasi: String,
