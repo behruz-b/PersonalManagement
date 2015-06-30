@@ -20,12 +20,12 @@
     border-top-style: inset;
 }
 .navtabs li> a{
-    font-family: bold;
+
     font-style: italic;
     color: #080808;
 }
 .navtabs li>a:hover{
-    color: #4cfd32;
+    color: #1334fd;
 }
 
 
