@@ -10,15 +10,16 @@
                     <h1 class="text-primary"><i>Xodimlarning shaxsiy ma'lumotlarini kiritish</i></h1>
                 </div>
             </div>
-            <div class="panel-body">
-                <ul class="nav nav-tabs nav-justified">
-                    <li class="active" ><a href="#1"  data-toggle="tab" title="Umumiy holat" > Umumiy</a></li>
-                    <li ><a href="#2" data-toggle="tab" title="Manzil Malumotlarni kiritish" >Manzil</a></li>
-                    <li ><a href="#3" data-toggle="tab" title="Pasport Malumotlarni kiritish" >Pasport</a></li>
-                    <li ><a href="#4" data-toggle="tab" title="Mehnat daftarchasi Malumotlarni kiritish" >Mehnat Daftarchasi</a></li>
-                    <li ><a href="#5" data-toggle="tab" title="Oila malumotlarni kiritish" >Oila</a></li>
-                    <li ><a href="#6" data-toggle="tab" title="Ish malumotlarni kiritish" >Ish</a></li>
-                    <li ><a href="#7" data-toggle="tab" title="Til bilish malumotlarni qo'shish" >Til Bilishi</a></li>
+            <div class="panel-body ">
+                <div class="navtabs  ">
+                <ul class="nav nav-tabs">
+                    <li class="active" ><a href="#1"  data-toggle="tab" title="Umumiy holat" ><i class="fa fa-group"></i>Umumiy </a></li>
+                    <li ><a href="#2" data-toggle="tab" title="Manzil Malumotlarni kiritish" ><i class="fa fa-bookmark"></i>Manzil</a></li>
+                    <li ><a href="#3" data-toggle="tab" title="Pasport Malumotlarni kiritish" ><i class="fa fa-edit"></i>Pasport</a></li>
+                    <li ><a href="#4" data-toggle="tab" title="Mehnat daftarchasi Malumotlarni kiritish" ><i class="fa fa-file-text"></i> Mehnat Daftarchasi</a></li>
+                    <li ><a href="#5" data-toggle="tab" title="Oila malumotlarni kiritish" ><i class="fa fa-users"></i> Oila</a></li>
+                    <li ><a href="#6" data-toggle="tab" title="Ish malumotlarni kiritish" ><i class="fa fa-graduation-cap"></i> Ish</a></li>
+                    <li ><a href="#7" data-toggle="tab" title="Harbiy xizmat malumotlarni qo'shish" ><i class="fa fa-cab"></i> Harbiy Xizmat</a></li>
                 </ul>
 
                 <div class="tab-content">
@@ -31,7 +32,7 @@
                                 <div class="row">
                                     <form class="" action="#" method="post">
                                         <div>
-                                            <input class="form-control form-group" name="Ismi" placeholder="Ismi...">
+                                            <input class="form-control form-group" type="text" name="Ismi" placeholder="Ismi...">
                                         </div>
                                         <br>
                                         <div>
@@ -524,6 +525,7 @@
                                     <select class="form-control"  >
                                         <option value="3159">Tanlang..</option>
                                         <option value="3160">Direktor</option>
+
                                         <option value="3162">O`quv va ilmiy ishlar bo`yicha dirеktor muovini</option>
                                         <option value="3176">Manaviy ma`rifiy ishlari bo`yicha dirеktor muovini</option>
                                         <option value="3181">Moliya-iqtisod va xo`jalik ishlari bo`yicha dirеktor muovini</option>
@@ -699,7 +701,7 @@
                                     </div>
                                 </div>
                                 <br>
-                                <input class="form-control" type="number" min="0.25" max="1" step="0.25" name="stavka" placeholder="Stavka(1,0.75,0.5,0.25)">
+                                <input class="form-control" type="text" name="stavka" placeholder="Stavka(1,0.75,0.5,0.25)">
                                 <br>
                                 <div class="text-center"><a href="#">
                                     <button type="button" class="btn btn-success" >Keyingi >></button>
@@ -756,8 +758,8 @@
                                 </div>
                                 <br>
 
-                                <div class="text-center"><a href="@routes.Workers.addWorkers()">
-                                    <button type="submit" class="btn btn-success" >Saqlash</button>
+                                <div class="text-center"><a href="#">
+                                    <button type="button" class="btn btn-success" >Keyingi >></button>
                                 </a></div>
 
                             </div>
