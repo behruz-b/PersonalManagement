@@ -1,51 +1,55 @@
 @(message: String)
-    @main("Tizimga kirish") {
-        <br/>
-        <div class="row">
-            <div class="col-xs-4 col-xs-offset-4 text-center">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h1><a href="@routes.Application.homePage()">Tizimga kirish</a></h1>
-                    </div>
-                    <div class="panel-body">
-                        <form class="form-group">
-                            <div class="row">
-                                <div class="col-xs-2">
-                                    <label for="login" class="form-control-static"><b>Login:</b></label>
-                                </div>
-                                <div class="col-xs-10">
-                                    <input type="text" class="form-control" placeholder="login..." id="login"/>
+@main("Tizimga kirish") {
+    <br/>
+    <div class="row">
+        <div class="col-xs-4 col-xs-offset-4 text-center">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h1><a href="@routes.Application.homePage()">Tizimga kirish</a></h1>
+                </div>
+                <div class="panel-body">
+                    <form class="form-group">
+                        <div class="row">
+                            <div class="col-xs-2">
+                                <label for="login" class="form-control-static"><b>Login:</b></label>
+                            </div>
+                            <div class="col-xs-10">
+                                <input type="text" class="form-control" placeholder="login..." id="login"/>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="row">
+                            <div class="col-xs-2">
+                                <label for="password" class="form-control-static"><b>Password:</b></label>
+                            </div>
+                            <div class="col-xs-10">
+                                <input type="password" placeholder="password..." class="form-control" id="password"/>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <div class="text-left">
+                                    <label for="checkbox" class="form-control-static"><b>Saqlab qolish:&nbsp;</b></label>
+                                    <input type="checkbox" id="checkbox"/>
                                 </div>
                             </div>
-                            <br/>
-                            <div class="row">
-                                <div class="col-xs-2">
-                                    <label for="password" class="form-control-static"><b>Password:</b></label>
-                                </div>
-                                <div class="col-xs-10">
-                                    <input type="password" placeholder="password..." class="form-control" id="password"/>
-                                </div>
+                            <div class="col-xs-2 col-xs-offset-5">
+                                <button type="submit" class="btn btn-success ">Kirish</button>
                             </div>
-                            <br/>
-                            <div class="row">
-                                <div class="col-xs-4">
-                                    <div class="text-left">
-                                        <label for="checkbox" class="form-control-static"><b>Saqlab qolish:&nbsp;</b></label>
-                                        <input type="checkbox" id="checkbox"/>
-                                    </div>
-                                </div>
-                                <div class="col-xs-2 col-xs-offset-5">
-                                    <button type="submit" class="btn btn-success ">Kirish</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="panel-footer">
-                        <h3><i>"Kirish" tugmasini bosganingiz bilan shu <a href="#">dasturing ishlash qoidalarini</a> tanishib
-                            qabul qilganinggizni bildiradi</i></h3>
-                    </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="panel-footer">
+                    <h3><i>"Kirish" tugmasini bosganingiz bilan shu <a href="#">dasturing ishlash qoidalarini</a>
+                        tanishib
+                        qabul qilganinggizni bildiradi</i></h3>
                 </div>
             </div>
         </div>
-    }
+        <div class="col-xs-6 col-xs-offset-3">
+            <img src="assets/images/porposeOurWork.png" alt="" class="img-responsive pictureInIndex"/>
+        </div>
+    </div>
+}
 
