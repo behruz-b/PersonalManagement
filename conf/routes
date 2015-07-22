@@ -15,6 +15,8 @@ POST        /addStudents                 @controllers.Students.addStudents
 GET         /addStudents                 @controllers.Students.showAddForm
 GET         /studentsList                @controllers.Students.studentsList
 GET         /student/:id/remove          @controllers.Students.remove(id: Int)
+POST        /student/:id/edit            @controllers.Students.updateStudents(id: Int)
+GET         /student/:id/edit            @controllers.Students.editFormStudentsList(id: Int)
 
 POST        /addWorkers                  @controllers.Workers.addWorkers
 GET         /addWorkers                  @controllers.Workers.showAddForm

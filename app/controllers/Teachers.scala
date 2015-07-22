@@ -34,7 +34,7 @@ class Teachers extends Controller{
 
 
   def remove(id: Int) = DBAction { implicit request =>
-    personalDataT.filter(_.id === id).delete;
+    personalDataT.filter(_.id === id).delete
     Redirect(routes.Teachers.teachersList())
   }
 

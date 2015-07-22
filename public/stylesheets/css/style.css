@@ -4,28 +4,27 @@
 
 }
 .navtabs li{
-    background-color: #d5f3ff;
+    background-color: #d9edf7;
     border: thin;
     border-color: #4cfd32;
     solid-opacity: 1px;
 }
 .navtabs li{
     border-right: thin;
-    border-right-color: #4cfd32;
+    border-right-color: #0066AA;
     border-right-style: inset;
 }
-.navtabs li{
-    border-top: thin;
-    border-top-color: #97fd9c;
-    border-top-style: inset;
-}
+/*.navtabs li{*/
+    /*border-top: thin;*/
+    /*border-top-color: #97fd9c;*/
+    /*border-top-style: inset;*/
+/*}*/
 .navtabs li> a{
 
-    font-style: italic;
     color: #080808;
 }
 .navtabs li>a:hover{
-    color: #1334fd;
+    color: #245269;
 }
 
 
