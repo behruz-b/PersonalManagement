@@ -36,7 +36,11 @@ audio, canvas, progress, video {
     display: inline-block;
     vertical-align: baseline
 }
-
+.btn-searchSize{
+    width:90px;
+    height: 47px;
+    margin-left: -5px;
+}
 audio:not([controls]) {
     display: none;
     height: 0
