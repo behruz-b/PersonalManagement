@@ -1,81 +1,60 @@
 @()
 
-@main("Talabalarni qo'shish") {
+    @main("Talabalarni qo'shish") {
 
-  @navbar("addStudents")
+        @navbar("addStudents")
 
-  <div class="container main-content">
-    <div class="row">
-      <div class="col-xs-4 col-xs-offset-4">
-
-
-            <h1><strong>Ro'yhatdan o'tish</strong></h1>
-
-
-            <div class="row">
-              <div class="col-lg-12">
-
-
-                <form class="@routes.Students.addStudents()" method="post">
-                  <div class="form-group">
-                    <label for="inp-ismi" class="color-black"></label>
-                    <input type="text" class="form-control" id="inp-ismi"
-                    name="ismi" required="" placeholder="Ismi">
-                  </div>
-                  <div class="form-group">
-                    <label for="inp-familiyasi" class="color-black"></label>
-                    <input type="text" class="form-control" id="inp-familiyasi"
-                    name="familiyasi" required="" placeholder="Familiyasi">
-                  </div>
-                  <div class="form-group">
-                    <label for="inp-otasining_ismi" class="color-black"></label>
-                    <input type="text" class="form-control" id="inp-otasining_ismi"
-                    placeholder="Otasining ismi" required="" name="otasining_ismi">
-                  </div>
-                  <div class="form-group">
-                    <label for="inp-tugulgan_sana" class="color-black"></label>
-                    <input type="date" class="form-control" id="inp-tugulgan_sana"
-                    placeholder="Tug'ulgan sanasi" required="" name="tugulgan_sana">
-                  </div>
-                  <div class="form-group">
-                    <label for="inp-guruhi" class="color-black"></label>
-                    <input type="text" class="form-control" id="inp-guruhi"
-                    name="guruhi" required="" placeholder="Gurugi misol:911-12">
-                  </div>
-                  <div class="form-group">
-                    <label for="inp-elektron_pochtasi" class="color-black"></label>
-                    <input type="email" class="form-control" id="inp-elektron_pochtasi"
-                    name="elektron_pochtasi" required="" placeholder="Elektron pochtasi">
-                  </div>
-
-                  <div class="form-group">
-                    <label for="inp-tel" class="color-black"></label>
-                    <input type="text" class="form-control" id="inp-tel"
-                     required="" name="tel" value="+998">
-                  </div>
-
-
-
-
-
-
-
-
-                  @*<br>*@
-                  <br>
-                  <button type="submit" class="btn btn-primary center-block text-center btn-block">
-                    Ro'yhatdan o'tish</button>
-                </form>
-              </div>
+        <div class="container main-content">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h1 class="text-center"><strong>Talabalarning ma'lumotlarini kiritish</strong></h1>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-lg-offset-4">
+                        <form class="@routes.Students.addStudents()" method="post">
+                            <div class="form-group">
+                                <label for="inp-ismi" class="color-black"></label>
+                                <input type="text" class="form-control" id="inp-ismi"
+                                name="ismi" required="" placeholder="Ismi">
+                            </div>
+                            <div class="form-group">
+                                <label for="inp-familiyasi" class="color-black"></label>
+                                <input type="text" class="form-control" id="inp-familiyasi"
+                                name="familiyasi" required="" placeholder="Familiyasi">
+                            </div>
+                            <div class="form-group">
+                                <label for="inp-otasining_ismi" class="color-black"></label>
+                                <input type="text" class="form-control" id="inp-otasining_ismi"
+                                placeholder="Otasining ismi" required="" name="otasining_ismi">
+                            </div>
+                            <div class="form-group">
+                                <label for="inp-tugulgan_sana" class="color-black"></label>
+                                <input type="date" class="form-control" id="inp-tugulgan_sana"
+                                placeholder="Tug'ulgan sanasi" required="" name="tugulgan_sana">
+                            </div>
+                            <div class="form-group">
+                                <label for="inp-guruhi" class="color-black"></label>
+                                <input type="text" class="form-control" id="inp-guruhi"
+                                name="guruhi" required="" placeholder="Gurugi misol:911-12">
+                            </div>
+                            <div class="form-group">
+                                <label for="inp-elektron_pochtasi" class="color-black"></label>
+                                <input type="email" class="form-control" id="inp-elektron_pochtasi"
+                                name="elektron_pochtasi" required="" placeholder="Elektron pochtasi">
+                            </div>
+                            <div class="form-group">
+                                <label for="inp-tel" class="color-black"></label>
+                                <input type="text" class="form-control" id="inp-tel"
+                                required="" name="tel" value="+998">
+                            </div>
+                            <br>
+                            <button type="submit" class="btn btn-primary center-block text-center btn-block">
+                                Saqlash</button>
+                        </form>
+                    </div>
+                    <br>
+                </div>
+                <br/>
             </div>
-
-            <br>
-
-
-
-      </div>
-    </div>
-  </div>
-
-
-}
+        </div>
+    }
